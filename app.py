@@ -1,10 +1,13 @@
-from website import create_app
+from flask import Flask
 import os
 if os.path.exists("env.py"):
   import env
 
-app = create_app()
+# Create instance of Flask class 
+app = Flask(__name__)
 
+
+# Decorator telling Flask which URL to trigger
 @app.route("/")
 def test():
   return "Application is up and running!"
