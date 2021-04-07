@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Decorator telling Flask which URL to trigger
 @app.route("/")
 def test():
-  return "Application is up and running!"
+  return "Application is up and running! Testing Git!"
 
 
 if __name__ == "__main__":
