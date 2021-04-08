@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadReview</title>
+</head>
+<body>
+  {% for book in books %} 
+      {{ book.title }}<br>
+      {{ book.author }}<br>
+      {{ book.genre }}<br>
+      {{ book.summary }}<br>
+      {{ book.review }}<br>
+      {{ book.upvotes }}<br>
+      {{ book.downvotes }}<br>
+  {% endfor %}
+</body>
+</html>
