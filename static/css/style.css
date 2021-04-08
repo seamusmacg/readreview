@@ -1,0 +1,65 @@
+ /* Custom CSS Parallax Template */
+ nav ul a,
+ nav .brand-logo {
+   color: #444;
+ }
+
+ /* Custom CSS Parallax Template */
+ p {
+   line-height: 2rem;
+ }
+
+ /* Custom CSS Parallax Template */
+ .sidenav-trigger {
+   color: #26a69a;
+ }
+
+ /* Custom CSS Parallax Template */
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255, 255, 255, .9);
+ }
+
+ /* Custom CSS Parallax Template */
+ .parallax-container .section {
+   width: 100%;
+ }
+
+ /* Custom CSS media queries Parallax Template */
+ @media only screen and (max-width : 992px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+
+ /* Custom CSS Parallax Template */
+ .icon-block {
+   padding: 0 15px;
+ }
+
+ /* Custom CSS Parallax Template */
+ .icon-block .material-icons {
+   font-size: inherit;
+ }
+
+ /* Custom CSS Parallax Template */
+ footer.page-footer {
+   margin: 0;
+ }
+
+ .img {
+   opacity: 0.2;
+}
