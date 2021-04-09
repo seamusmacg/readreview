@@ -4,13 +4,13 @@
   <div class="section no-pad-bot">
     <div class="container">
       <br><br>
-      <h1 class="header center teal-text text-lighten-2">Welcome to ReadReview!</h1>
+      <h1 class="header center main-title">Welcome to ReadReview</h1>
       <div class="row center">
         <h5 class="header col s12 light">Submit reviews on your latest reads</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button"
-          class="btn-large waves-effect waves-light teal lighten-1">Explore Collection</a>
+        <a href="http://materializecss.com/getting-started.html" id="main-button"
+          class="btn-large tooltipped waves-effect waves-light grey" data-position="bottom" data-tooltip="Our complete catalogue of books">See Catalogue</a>
       </div>
       <br><br>
 
@@ -25,36 +25,13 @@
 
     <!--   Icon Section   -->
     <div class="row">
-      <div class="col s12 m4">
+      <div class="col s12">
         <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-          <h5 class="center">Speeds up development</h5>
+          <h2 class="center brown-text"><i class="fas fa-caret-down"></i></h2>
+          <h5 class="center">About</h5>
 
-          <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our
-            custom components. Additionally, we refined animations and transitions to provide a smoother experience
-            for developers.</p>
-        </div>
-      </div>
-
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-          <h5 class="center">User Experience Focused</h5>
-
-          <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework
-            that incorporates components and animations that provide more feedback to users. Additionally, a single
-            underlying responsive system across all platforms allow for a more unified user experience.</p>
-        </div>
-      </div>
-
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-          <h5 class="center">Easy to work with</h5>
-
-          <p class="light">We have provided detailed documentation as well as specific code examples to help new users
-            get started. We are also always open to feedback and can answer any questions a user may have about
-            Materialize.</p>
+          <p class="light">ReadReview is site designed for readers and book recommendations. Our mission is to help people discover and share books they love. If you're looking for a place to find a great book or to share your opinion of a book you have read, you've found the right place!</p>
+          <p class="light">Our </p>
         </div>
       </div>
     </div>
@@ -62,7 +39,7 @@
   </div>
 </div>
 
-{% for book in books %}
+<!-- {% for book in books %}
 {{ book.title }}<br>
 {{ book.author }}<br>
 {{ book.genre }}<br>
@@ -70,6 +47,6 @@
 {{ book.review }}<br>
 {{ book.upvotes }}<br>
 {{ book.downvotes }}<br>
-{% endfor %}
+{% endfor %} -->
 
 {% endblock %}
