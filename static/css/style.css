@@ -1,3 +1,14 @@
+ /* All elements */
+ * {
+  font-family: 'Goudy Bookletter 1911', serif;
+  letter-spacing: 2px;
+ }
+
+ .main-title {
+   color: #bdadad;
+ }
+
+ 
  /* Custom CSS Parallax Template */
  nav ul a,
  nav .brand-logo {
@@ -63,3 +74,4 @@
  .img {
    opacity: 0.2;
 }
+
