@@ -8,11 +8,63 @@
    color: #bdadad;
  }
 
- 
+ .icon-block #final-paragraph {
+  font-weight: bold;
+  text-align: center;
+ }
+
+ .icon-block p {
+   font-size: larger;
+ }
+
+ .about-icon {
+   text-align: center;
+   color: #722F37;
+ }
+
+ .about-title {
+   text-align: center;
+   color: #a27840;
+ }
+
+ .page-footer {
+   background-color: #00001a;
+ }
+
+ .headers {
+  color: #a27840;
+ }
+
+ .nav-bg-color {
+   background-color: white;
+ }
+
+ .work-links {
+   color: white;
+ }
+
+ .fa {
+   font-size: 1.7rem;
+   padding: 5px;
+ }
+
+ .social-icons {
+   display: inline;
+ }
+
+footer i:hover {
+   color: #a27840;
+ }
+
+footer a:hover {
+   color: #a27840;
+ }
+
+
  /* Custom CSS Parallax Template */
  nav ul a,
  nav .brand-logo {
-   color: #444;
+   color: #00001a;
  }
 
  /* Custom CSS Parallax Template */
@@ -22,7 +74,7 @@
 
  /* Custom CSS Parallax Template */
  .sidenav-trigger {
-   color: #26a69a;
+   color: #00001a;
  }
 
  /* Custom CSS Parallax Template */
