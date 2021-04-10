@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
   <!-- CSS  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet"
+    media="screen,projection" />
   {% block style %}
   {% endblock %}
 </head>
 
 <body>
-  <nav class="white" role="navigation">
+  <nav class="nav-bg-color" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Read|Review</a>
       <ul class="right hide-on-med-and-down">
@@ -39,40 +41,42 @@
   {% endblock %}
 
 
-  <footer class="page-footer teal">
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our
-            full time job. Any amount would help support and continue development on this project and is greatly
-            appreciated.</p>
+          <h5 class="headers">Mission</h5>
+          <p class="white-text">We are team of passionate readers who want to help our fellow readers around the world
+            discover great works.</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="headers">Work With Us</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="work-links" href="#!">Authors</a></li>
+            <li><a class="work-links" href="#!">Advertise</a></li>
+            <li><a class="work-links" href="#!">Careers</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="headers">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li class="social-icons"><a class="white-text" href="https://www.facebook.com/" target="_blank"><i
+                  class="fa fa-facebook"></i></a></li>
+            <li class="social-icons"><a class="white-text" href="https://twitter.com/" target="_blank"><i
+                  class="fa fa-twitter"></i></a></li>
+            <li class="social-icons"><a class="white-text" href="https://www.instagram.com/" target="_blank"><i
+                  class="fa fa-instagram"></i></a></li>
+            <li class="social-icons"><a class="white-text" href="https://linkedin.com/" target="_blank"><i
+                  class="fa fa-linkedin"></i></a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com"> © Seamus Mac Grianna</a>
       </div>
     </div>
   </footer>
@@ -81,7 +85,7 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://kit.fontawesome.com/87798f37e6.js" crossorigin="anonymous"></script>       
+  <script src="https://kit.fontawesome.com/87798f37e6.js" crossorigin="anonymous"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   {% block scripts %}
   {% endblock %}
