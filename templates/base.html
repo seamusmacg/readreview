@@ -21,16 +21,30 @@
 <body>
   <nav class="nav-bg-color" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Read|Review</a>
+      <a id="logo-container" href="{{ url_for('get_home') }}" class="brand-logo">Read|Review</a>
+      <!-- Top Navbar -->
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
+        <li><a href="{{ url_for('get_home') }}">Home</a></li>
+        <li><a href="#">Profile</a></li>
         <li><a href="#">Catalogue</a></li>
-        <li><a href="#">Search</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="#">Add Book</a></li>
+        <li><a href="#">Delete Book</a></li>
+        <li><a href="#">Log Out</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Register</a></li>
       </ul>
-
+      
+      <!-- Mobile Navbar -->
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><h4 class="center-align headers">Read|Review</h4></li>
+        <li><a href="{{ url_for('get_home') }}">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Catalogue</a></li>
+        <li><a href="#">Add Book</a></li>
+        <li><a href="#">Delete Book</a></li>
+        <li><a href="#">Log Out</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Register</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -63,13 +77,13 @@
           <h5 class="headers">Connect</h5>
           <ul>
             <li class="social-icons"><a class="white-text" href="https://www.facebook.com/" target="_blank"><i
-                  class="fa fa-facebook"></i></a></li>
+                  class="fa fa-facebook"><span class="sr-only">Facebook</span></i></a></li>
             <li class="social-icons"><a class="white-text" href="https://twitter.com/" target="_blank"><i
-                  class="fa fa-twitter"></i></a></li>
+                  class="fa fa-twitter"><span class="sr-only">Twitter</span></i></a></li>
             <li class="social-icons"><a class="white-text" href="https://www.instagram.com/" target="_blank"><i
-                  class="fa fa-instagram"></i></a></li>
+                  class="fa fa-instagram"><span class="sr-only">Instagram</span></i></a></li>
             <li class="social-icons"><a class="white-text" href="https://linkedin.com/" target="_blank"><i
-                  class="fa fa-linkedin"></i></a></li>
+                  class="fa fa-linkedin"><span class="sr-only">Linkedin</span></i></a></li>
           </ul>
         </div>
       </div>

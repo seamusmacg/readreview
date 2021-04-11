@@ -18,11 +18,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# Decorator telling Flask which URL to trigger
+# Decorator and function for Home page
 @app.route("/")
-def index():
+def get_home():
+  return render_template("index.html")
+
+
+# Decorator and function for Catalogue page
+@app.route("/catalogue")
+def get_catalogue():
   books = mongo.db.books.find()
-  return render_template("index.html", books=books)
+  return render_template("catalogue.html", books=books)
 
 
 if __name__ == "__main__":
