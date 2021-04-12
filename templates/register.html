@@ -2,25 +2,42 @@
 {% block content %}
 
 <!-- Register Form -->
-<section class="register">
+<section class="register-form">
   <div class="form-container">
     <div class="row">
-      <form class="col s12" action="" method="post">
-        <div class="container">
-          <div class="row">
-            <div class="input-field col s12">
-              <input placeholder="Enter a Username" id="username" type="username" class="validate">
-              <label for="username">Username</label>
-            </div>
+      <div class="col s12 m6 offset-m3">
+        <div class="card">
+          <div class="card-action teal lighten-1 white-text">
+            <h3>Register</h3>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input placeholder="Enter a Password" id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
+          <div class="card-content">
+            <div class="form-field">
+              <label for="username">Username</label>
+              <input type="text" id="username">
+            </div><br>
+
+            <div class="form-field">
+              <label for="Password">Password</label>
+              <input type="text" id="username">
+            </div><br>
+
+            <div class="form-field">
+              <label>
+                <input type="checkbox" />
+                <span>Remember Me</span>
+              </label>
+            </div><br>
+
+            <div class="form-field">
+              <button class="btn-large waves-effect waves-dark submit-btn" type="submit" name="action">Submit</button>
+            </div><br>
+
+
           </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </section>
+
+{% endblock %}
