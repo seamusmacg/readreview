@@ -6,6 +6,8 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
+from user.models import *
+
 
 # Create instance of Flask class 
 app = Flask(__name__)
@@ -18,17 +20,23 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# Decorator and function for Home page
+# Routes
 @app.route("/")
 def get_home():
   return render_template("index.html")
 
+@app.route('/register', methods=['GET'])
+def register():
+  # user = User()
+  # return user.register()
+  return render_template("register.html")
 
-# Decorator and function for Catalogue page
+
 @app.route("/catalogue")
 def get_catalogue():
   books = mongo.db.books.find()
   return render_template("catalogue.html", books=books)
+
 
 
 if __name__ == "__main__":
