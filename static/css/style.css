@@ -60,6 +60,15 @@ footer a:hover {
    color: #a27840;
  }
 
+ .submit-btn {
+   width: 100%;
+ }
+
+ .form-container {
+  min-height: calc(100vh - 60px);
+  margin-top: 80px;
+ }
+
  /* Custom CSS Parallax Template */
  nav ul a,
  nav .brand-logo {
