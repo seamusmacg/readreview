@@ -1,7 +1,11 @@
  /* All elements */
  * {
-  font-family: 'Goudy Bookletter 1911', serif;
-  letter-spacing: 2px;
+   font-family: 'Goudy Bookletter 1911', serif;
+   letter-spacing: 2px;
+ }
+
+ body {
+   background-color: #722F37;
  }
 
  .main-title {
@@ -9,8 +13,9 @@
  }
 
  .icon-block #final-paragraph {
-  font-weight: bold;
-  text-align: center;
+   font-weight: bold;
+   text-align: center;
+   color: white;
  }
 
  .icon-block p {
@@ -19,7 +24,7 @@
 
  .about-icon {
    text-align: center;
-   color: #722F37;
+   color: #00001a;
  }
 
  .about-title {
@@ -32,7 +37,7 @@
  }
 
  .headers {
-  color: #a27840;
+   color: #a27840;
  }
 
  .nav-bg-color {
@@ -52,11 +57,11 @@
    display: inline;
  }
 
-footer i:hover {
+ footer i:hover {
    color: #a27840;
  }
 
-footer a:hover {
+ footer a:hover {
    color: #a27840;
  }
 
@@ -65,9 +70,34 @@ footer a:hover {
  }
 
  .form-container {
-  min-height: calc(100vh - 60px);
-  margin-top: 80px;
+   min-height: calc(100vh - 60px);
+   margin-top: 80px;
  }
+
+ /* https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen */
+ input:focus {
+   border-bottom: 1px solid #00001a !important;
+   box-shadow: 0 1px 0 0 #00001a !important;
+ }
+
+
+ /* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
+ [type="checkbox"]:checked+span:not(.lever):before {
+
+   border-right: 2px solid #a27840 !important;
+   border-bottom: 2px solid #a27840 !important;
+
+ }
+
+ .card-action {
+   background-color: #00001a !important;
+   color: #a27840 !important;
+ }
+
+ .submit-btn {
+  background-color: #00001a !important;
+ }
+
 
  /* Custom CSS Parallax Template */
  nav ul a,
@@ -133,5 +163,4 @@ footer a:hover {
 
  .img {
    opacity: 0.2;
-}
-
+ }
