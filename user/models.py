@@ -10,14 +10,26 @@ class User:
     
     # Create the user object
     user = {
-      "username": request.form.get('username'),
+      "username": request.form.get('username').lower(),
       "password": request.form.get('password')
     }
 
     # Encrypt  the password
     user['password'] = generate_password_hash(user['password'])
 
+    # Check if user exists
+    existing_user = mongo.db.users.find_one({"username": user['username'].lower()})
+    if existing_user:
+      return jsonify({ "error": "Username already exists"}), 400
 
-    mongo.db.users.insert_one(user)
+    # Insert new user to DB
+    new_user = mongo.db.users.insert_one(user)
+    if new_user:
+      return jsonify(user), 200
 
-    return jsonify(user)
+
+    # Add new user to 'session' cookie
+    session["user"] = user['username'].lower()
+    flash("Registration successful!")
+
+    return jsonify({"error": "Signup failed"}), 400
