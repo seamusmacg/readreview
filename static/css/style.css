@@ -74,6 +74,14 @@
    margin-top: 80px;
  }
 
+ .error {
+   color: rgb(161, 26, 26);
+   text-align: center;
+   padding: 2px;
+   font-size: larger;
+   font-weight: bold;
+ }
+
  /* https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen */
  input:focus {
    border-bottom: 1px solid #00001a !important;
