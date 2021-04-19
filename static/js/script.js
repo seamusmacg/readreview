@@ -24,9 +24,21 @@ $("form[name=register_account]").submit(function(e){
     },
     error: function(resp) {
       console.log(resp);
+      $error.text(resp.responseJSON.error).removeClass("error-hidden");
     }
 
   })
 
   e.preventDefault();
 });
+
+
+function togglePassword() {
+  var password_input = document.getElementById("password");
+
+  if (password_input.type == "password") {
+    password_input.type = "text";
+  } else {
+    password_input.type = "password";
+  }
+}
