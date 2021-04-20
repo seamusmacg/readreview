@@ -42,6 +42,10 @@ def register():
     return user.create_user()
   return render_template("register.html")
 
+@app.route('/dashboard/')
+def get_dashboard():
+  return render_template('dashboard.html')
+
 # @app.route('/register/create_account', methods=['POST'])
 # def create_account():
 #   user = User()
