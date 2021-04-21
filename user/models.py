@@ -1,9 +1,15 @@
-from flask import Flask, jsonify, request, redirect
+from flask import Flask, jsonify, request, redirect, session
 #from passlib.hash import pbkdf2_sha256
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import *
 
 class User:
+
+  def start_session(self, user):
+    del user['password']
+    session['logged_in'] = True
+    session['user'] = user
+    return jsonify(user), 200
 
   def create_user(self):
     print(request.form)
@@ -38,7 +44,7 @@ class User:
     # Insert new user to DB
     new_user = mongo.db.users.insert_one(user)
     if new_user:
-      return jsonify(user), 200
+      return self.start_session(user)
 
 
     # Add new user to 'session' cookie
@@ -46,3 +52,18 @@ class User:
     # flash("Registration successful!")
 
     return jsonify({"error": "Register failed"}), 400
+
+  def logout(self):
+      session.clear()
+      return redirect('/')
+    
+  def login(self):
+    
+    existing_user = mongo.db.users.find_one({
+      "username": request.form.get('username').lower()
+      })
+    
+    if existing_user:
+      return self.start_session(existing_user)
+    
+    return jsonify({"error": "Incorrect login details" }), 401
