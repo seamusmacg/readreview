@@ -20,7 +20,30 @@ $("form[name=register_account]").submit(function(e){
     data: data,
     dataType: "json",
     success: function(resp) {
-      window.location.href = "/dashboard/";
+      window.location.href = "/profile/";
+    },
+    error: function(resp) {
+      $error.text(resp.responseJSON.error).removeClass("error-hidden");
+    }
+
+  })
+
+  e.preventDefault();
+});
+
+$("form[name=login]").submit(function(e){
+
+  var $form = $(this);
+  var $error = $form.find(".error");
+  var data = $form.serialize();
+
+  $.ajax({
+    url: "/login/",
+    type: "POST",
+    data: data,
+    dataType: "json",
+    success: function(resp) {
+      window.location.href = "/profile/";
     },
     error: function(resp) {
       $error.text(resp.responseJSON.error).removeClass("error-hidden");
