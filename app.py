@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for, jsonify)
 from flask_pymongo import PyMongo
+from functools import wraps
 from bson.objectid import ObjectId
 from bson.json_util import ObjectId
 import json
@@ -29,6 +30,15 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# Decorators
+def login_required(f):
+  @wraps(f)
+  def wrap(*args, **kwargs):
+    if 'logged_in' in session:
+      return f(*args, **kwargs)
+    else:
+      return redirect('/')
+  return wrap
 
 # Routes
 @app.route("/")
@@ -42,14 +52,23 @@ def register():
     return user.create_user()
   return render_template("register.html")
 
-@app.route('/dashboard/')
-def get_dashboard():
-  return render_template('dashboard.html')
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+  if request.method == "POST":
+    user = User()
+    return user.login()
+  return render_template("login.html")
 
-# @app.route('/register/create_account', methods=['POST'])
-# def create_account():
-#   user = User()
-#   return user.create_account()
+@app.route('/logout/')
+def signout():
+  user = User()
+  return user.logout()
+
+
+@app.route('/profile/')
+@login_required
+def get_profile():
+  return render_template('profile.html')
 
 
 @app.route("/catalogue")
