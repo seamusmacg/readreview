@@ -65,10 +65,6 @@
    color: #a27840;
  }
 
- .submit-btn {
-   width: 100%;
- }
-
  .form-container {
    min-height: calc(100vh - 60px);
    margin-top: 80px;
@@ -102,13 +98,14 @@
    color: #a27840 !important;
  }
 
- .submit-btn {
+ .general-btn {
   background-color: #00001a !important;
+  width: 100%;
  }
 
  #welcome-message {
    font-size: x-large;
-   padding-bottom: 5px;
+   padding-bottom: 12px;
  }
 
 
