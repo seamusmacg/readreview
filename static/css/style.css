@@ -78,12 +78,23 @@
    color: #00001a;
  }
 
+ .catalogue-container {
+  min-height: calc(100vh - 60px);
+  margin-top: 80px;
+ }
+
  .error {
    color: red;
    text-align: center;
    padding: 2px;
    font-size: larger;
    font-weight: bold;
+ }
+
+ .book-image {
+   height: 100px;
+   width: 150px;
+   overflow: hidden;
  }
 
  /* https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen */
