@@ -60,7 +60,7 @@ def login():
   return render_template("login.html")
 
 @app.route('/logout/')
-def signout():
+def logout():
   user = User()
   return user.logout()
 
