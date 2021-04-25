@@ -70,8 +70,16 @@
    margin-top: 80px;
  }
 
+ .form-link {
+   color: #a27840;
+ }
+
+ form a:hover {
+   color: #00001a;
+ }
+
  .error {
-   color: rgb(161, 26, 26);
+   color: red;
    text-align: center;
    padding: 2px;
    font-size: larger;
