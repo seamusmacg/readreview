@@ -11,7 +11,7 @@
               <h2 class="center">User Profile</h2>
             </div>
             <div class="card-content grey lighten-2 center">
-              <h3>Hello {{ session['user']['username'] }}!</h3>
+              <h3>Hello {{ session['user']['username'].capitalize() }}!</h3>
               <p id="welcome-message">Remember as a fully registered user you can add books to the catalogue</p>
               <a href="/logout" class="waves-effect waves-light btn-large general-btn">Logout</a>
 
