@@ -24,21 +24,21 @@ class User:
     user['password'] = generate_password_hash(user['password'])
 
     # Check if fields are blank
-    if not request.form.get('username') or not request.form.get('password'):
-      return jsonify({ "error": "Fields cannot left blank"}), 400
+    # if not request.form.get('username') or not request.form.get('password'):
+    #   return jsonify({ "error": "Fields cannot left blank"}), 400
 
     # Check if user exists
     existing_user = mongo.db.users.find_one({"username": user['username'].lower()})
     if existing_user:
-      return jsonify({ "error": "Username already exists"}), 400
+      return jsonify({ "error": "Username already exists, try another!"}), 400
 
     # Check username length 
-    if len(request.form.get('username')) < 4:
-      return jsonify({ "error": "Enter username at least 4 characters long"}), 400
+    # if len(request.form.get('username')) < 4:
+    #   return jsonify({ "error": "Enter username at least 4 characters long"}), 400
 
     # Check password length 
-    if len(request.form.get('password')) < 8:
-      return jsonify({ "error": "Enter password at least 8 characters long"}), 400
+    # if len(request.form.get('password')) < 8:
+    #   return jsonify({ "error": "Enter password at least 8 characters long"}), 400
 
 
     # Insert new user to DB
@@ -63,7 +63,7 @@ class User:
       "username": request.form.get('username').lower()
       })
     
-    if existing_user:
+    if existing_user and check_password_hash(existing_user['password'], request.form.get('password')):
       return self.start_session(existing_user)
     
     return jsonify({"error": "Incorrect login details" }), 401
