@@ -68,7 +68,7 @@ def logout():
 @app.route('/profile/')
 @login_required
 def get_profile():
-  return render_template('profile.html')
+  return render_template("profile.html")
 
 
 @app.route("/catalogue")
