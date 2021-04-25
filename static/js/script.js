@@ -4,6 +4,7 @@
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.tooltipped').tooltip();
+    $('.collapsible').collapsible();
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
