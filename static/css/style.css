@@ -91,28 +91,33 @@
    font-weight: bold;
  }
 
- /* .book-image {
-   height: 188px;
-   width: 300px;
- } */
 
  .collapsible-body {
    background-color: #bdadad;
  }
-/* 
- .collapsible-header i {
 
-  position: absolute;
-  right: 10px;
-} */
 
 .collapsible-body img {
   box-shadow: 5px 5px 5px rgba(0,0,0, 0.7);
 }
- .thumbnail-image {
-   height: 188px;
-   width: 300px;
- }
+
+
+.collapsible-header {
+  background-color: #00001a;
+  color: white;
+}
+
+.collapsible-header i {
+  color: #a27840;
+}
+
+.submission {
+  color: #8d5205 ;
+}
+
+table button {
+  background-color: #00001a;
+}
 
  /* https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen */
  input:focus {
