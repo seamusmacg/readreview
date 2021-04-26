@@ -71,10 +71,11 @@ def get_profile():
   return render_template("profile.html")
 
 
-@app.route("/catalogue")
+@app.route("/catalogue", methods=['GET', 'POST'])
 def get_catalogue():
   books = mongo.db.books.find()
-  return render_template("catalogue.html", books=books)
+  reviews = mongo.db.reviews.find()
+  return render_template("catalogue.html", books=books, reviews=reviews)
 
 
 
