@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, redirect, session
 #from passlib.hash import pbkdf2_sha256
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import *
+import datetime
 
 class User:
 
@@ -67,3 +68,23 @@ class User:
       return self.start_session(existing_user)
     
     return jsonify({"error": "Incorrect login details" }), 401
+  
+class Review:
+  
+  def add_review(self):
+    
+    # Create review object
+    review = {
+      "review": request.form.get("review"),
+      "username": session['user']["username"],
+      "title": request.form.get("title"),
+      "date": datetime.datetime.utcnow()
+      
+    }
+    existing_title = mongo.db.reviews.find_one({"title": review['title']})
+    
+    if existing_title:
+      new_review = mongo.db.reviews.insert_one(review)
+      return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+    else:
+      return jsonify({"error": "Sorry, book title does not exist"}), 400
