@@ -55,6 +55,31 @@ $("form[name=login]").submit(function(e){
   e.preventDefault();
 });
 
+$("form[name=add_review]").submit(function(e){
+
+  var $form = $(this);
+  var $error = $form.find(".error");
+  var data = $form.serialize();
+
+  $.ajax({
+    url: "/catalogue",
+    type: "POST",
+    data: data,
+    dataType: "json",
+    success: function(resp) {
+      console.log(resp)
+      window.location.href = "/catalogue";
+    },
+    error: function(resp) {
+      // $error.text(resp.responseJSON.error).removeClass("error-hidden");
+      console.log(resp)
+    }
+
+  })
+
+  e.preventDefault();
+});
+
 
 function togglePassword() {
   var password_input = document.getElementById("password");
