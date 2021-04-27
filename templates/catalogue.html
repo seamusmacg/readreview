@@ -42,42 +42,54 @@
                     <td><strong style="font-weight: bold;">Summary:</strong> {{ book.summary }}</td>
                   </tr>
 
-                  {% for review in reviews %}
-                  {% if review.title == book.title %}
                   <thead>
                     <tr>
                       <th>Reviews for {{ book.title }}</th>
                     </tr>
                   </thead>
 
+                  {% for review in reviews %}
+                  {% if review.title == book.title %}
+
                   <tr>
                     <td>
                       {{ review.review }}
                       <br>
-                      <i class="submission">Submitted by {{ review.username.capitalize() }} {{ review.date }}</i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <thead>
-                      <tr>
-                        <th>Leave a review for {{ book.title }}</th>
-                      </tr>
-                    </thead>
-                    <td>
-                      <div class="row">
-                        <div class="input-field">
-                          <i class="material-icons prefix">mode_edit</i>
-                          <textarea id="textarea1" class="materialize-textarea"></textarea>
-                          <label for="textarea1">Review</label>
-                        </div>
-                      </div>
-                      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
-                      </button>
+                      <i class="submission">Submitted by {{ review.username.capitalize() }} {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }}</i>
                     </td>
                   </tr>
                   {% endif %}
                   {% endfor %}
+                  <tr>
+                    <form name="add_review">
+                      <thead>
+                        <tr>
+                          <th>Leave a review for {{ book.title }} </th>
+                        </tr>
+                      </thead>
+                      <td>
+                        <div class="row">
+                          <div class="input-field">
+                            <i class="material-icons prefix">book</i>
+                            <input value="{{ book.title }}" name="title" type="text" readonly="readonly">
+                            <label for="title">Book Title</label>
+                          </div>
+
+                        </div>
+                        <div class="row">
+                          <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="review" name="review" class="materialize-textarea"></textarea>
+                            <label for="review">Review</label>
+                          </div>
+
+                        </div>
+                        <p class="error error--hidden"></p>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        </button>
+                      </td>
+                    </form>
+                  </tr>
                 </tbody>
               </table>
             </div>
