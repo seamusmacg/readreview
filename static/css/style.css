@@ -115,15 +115,33 @@
   color: #8d5205 ;
 }
 
-table button {
+.catalogue .material-icons {
+  color: #722F37;
+}
+
+.catalogue .btn {
   background-color: #00001a;
 }
+
 
  /* https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen */
  input:focus {
    border-bottom: 1px solid #00001a !important;
    box-shadow: 0 1px 0 0 #00001a !important;
  }
+
+ textarea:focus {
+   border-bottom: 1px solid #00001a !important;
+   box-shadow: 0 1px 0 0 #00001a !important;
+ }
+
+.catalogue .input-field .prefix.active {
+  color: #00001a !important;
+}
+
+.catalogue .input-field label.active {
+  color: #00001a !important;
+}
 
 
  /* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
@@ -133,6 +151,8 @@ table button {
    border-bottom: 2px solid #a27840 !important;
 
  }
+
+
 
  .card-action {
    background-color: #00001a !important;
