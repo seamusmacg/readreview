@@ -20,7 +20,7 @@ class MyEncoder(json.JSONEncoder):
         return super(MyEncoder, self).default(obj)
 
 # Create instance of Flask class 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 app.json_encoder = MyEncoder
 
 # Configure MongoDB and Secret Key
@@ -65,18 +65,20 @@ def logout():
   return user.logout()
 
 
-@app.route('/profile/')
-@login_required
-def get_profile():
-  return render_template("profile.html")
-
-
-@app.route("/catalogue", methods=['GET', 'POST'])
+@app.route("/catalogue", methods=[ 'GET','POST'])
 def get_catalogue():
+  if request.method == "POST":
+    review = Review()
+    return review.add_review()
   books = mongo.db.books.find()
   reviews = mongo.db.reviews.find()
   return render_template("catalogue.html", books=books, reviews=reviews)
 
+
+@app.route('/profile/')
+@login_required
+def get_profile():
+  return render_template("profile.html")
 
 
 if __name__ == "__main__":
