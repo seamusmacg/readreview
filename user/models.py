@@ -81,6 +81,9 @@ class Review:
       "date": datetime.datetime.utcnow()
       
     }
+    already_submitted = mongo.db.reviews.find_one({"title": review['title'], "username": review['username']})
+    if already_submitted:
+      return json.dumps({'error': "Sorry, user has already submitted a review for this book"}), 400, {'ContentType':'application/json'} 
     existing_title = mongo.db.reviews.find_one({"title": review['title']})
     
     if existing_title:
