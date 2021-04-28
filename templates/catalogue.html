@@ -55,13 +55,14 @@
                     <td>
                       {{ review.review }}
                       <br>
-                      <i class="submission">Submitted by {{ review.username.capitalize() }} {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }}</i>
+                      <i class="submission">Submitted by {{ review.username.capitalize() }}
+                        {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }}</i>
                     </td>
                   </tr>
                   {% endif %}
                   {% endfor %}
                   <tr>
-                    <form name="add_review">
+                    <form name="add_review" id="review_form">
                       <thead>
                         <tr>
                           <th>Leave a review for {{ book.title }} </th>
@@ -78,15 +79,33 @@
                         </div>
                         <div class="row">
                           <div class="input-field">
+
                             <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="review" name="review" class="materialize-textarea"></textarea>
+                            <textarea id="review" name="review" class="materialize-textarea validate" minlength="20"
+                              maxlength="150" pattern="^[a-zA-Z0-9]{20,150}$" required></textarea>
                             <label for="review">Review</label>
+                            <span class="helper-text" data-error="Review must be between 20 and 150 characters"
+                              data-success="Ready to go!"></span>
                           </div>
 
                         </div>
                         <p class="error error--hidden"></p>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <button data-target="modal1" type="button" id="myBtn" class="btn waves-effect waves-light modal-trigger">Submit
                         </button>
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                          <div class="modal-content center-align">
+                            <h4>Are you sure you would like to submit?</h4>
+                          </div>
+                          <div class="modal-content center-align">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+                            <button class="btn waves-effect waves-light" id="submit-review" type="submit" name="action">Submit
+                            </button>
+                          </div>
+                          <h4 class="review-success center-align">Success! Review submitted successfully</h4>
+                          <h4 class="review-error center-align"></h4>
+                        </div>
+
                       </td>
                     </form>
                   </tr>
