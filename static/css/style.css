@@ -143,6 +143,29 @@
   color: #00001a !important;
 }
 
+.modal { 
+  width: 25% !important ; 
+  height: 25% !important ; 
+} 
+
+.modal a {
+  color: #a27840;
+}
+
+.review-success {
+  color: green; 
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.review-error {
+  color: red; 
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
 
  /* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
  [type="checkbox"]:checked+span:not(.lever):before {
