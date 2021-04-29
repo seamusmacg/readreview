@@ -91,3 +91,18 @@ class Review:
       return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
     else:
       return jsonify({"error": "Sorry, book title does not exist"}), 400
+    
+    
+  def delete_review(self):
+    
+    review = {
+      "review":  request.form.get("review"),
+      "username": request.form.get("username")
+    }
+    delete_review = mongo.db.reviews.remove({"review": review['review'], "username": review['username']})
+    
+    if delete_review:
+      return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+    else:
+      return json.dumps({'error': "Sorry, that review doesn't exist"}), 400, {'ContentType':'application/json'}
+      
