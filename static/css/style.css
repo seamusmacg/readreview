@@ -165,6 +165,28 @@
   text-align: center;
   padding-top: 40px;
 }
+.delete-success {
+  color: green; 
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+.delete-error {
+  color: red; 
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.modify-review {
+  color: #722F37;
+}
+
+td a:hover {
+  color: #a27840;
+}
 
 
  /* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
