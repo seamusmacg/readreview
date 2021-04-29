@@ -95,11 +95,17 @@ class Review:
     
   def delete_review(self):
     
+    # review = {
+    #   "review":  request.form.get("review"),
+    #   "username": request.form.get("username")
+    # }
+    # delete_review = mongo.db.reviews.remove({"review": review['review'], "username": review['username']})
+    
     review = {
-      "review":  request.form.get("review"),
-      "username": request.form.get("username")
+      "_id": request.form.get("id")
     }
-    delete_review = mongo.db.reviews.remove({"review": review['review'], "username": review['username']})
+    
+    delete_review = mongo.db.reviews.remove({"_id": ObjectId(review['_id'])})
     
     if delete_review:
       return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
