@@ -59,15 +59,14 @@
                         {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }}</i>
                       <br>
                       {% if review.username == session['user']['username'] %}
-                      <a href="" class="modify-review">Edit</a>&nbsp;<a class="modify-review modal-trigger"
-                        href="#modal-{{ review._id }}">Delete</a>
+                      <a href="#modal-ed-{{ review._id }}" class="modify-review modal-trigger">Edit</a>&nbsp;<a
+                        class="modify-review modal-trigger" href="#modal-{{ review._id }}">Delete</a>
                       <form name="delete_review" id="delete_review">
                         <!-- Modal Structure -->
                         <div id="modal-{{ review._id }}" class="modal center-align">
                           <div class="modal-content">
                             <h4>Delete this review?</h4>
-                            <input value="{{ review.review }}" name="review" type="text" readonly="readonly">
-                            <input value="{{ review.username.lower() }}" name="username" type="text" readonly="readonly">
+                            <input value="{{ review._id }}" name="id" type="text" readonly="readonly" hidden>
                           </div>
                           <div class="modal-content">
                             <button class="btn waves-effect waves-light center-align" id="delete-review" type="submit"
@@ -78,7 +77,36 @@
                           <h4 class="delete-error center-align"></h4>
                         </div>
                       </form>
-                    {% endif %}
+                      <form name="edit_review" id="edit_review">
+                        <!-- Modal Structure -->
+                        <div id="modal-ed-{{ review._id }}" class="modal center-align">
+                          <div class="modal-content">
+                            <h4>Edit this review?</h4>
+                            <div class="row">
+                              <div class="input-field">
+
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="edit-review" name="review" class="materialize-textarea validate"
+                                  minlength="20" maxlength="150" pattern="^[a-zA-Z0-9]{20,150}$"
+                                  required>{{ review.review }}</textarea>
+                                <label for="review">Review</label>
+                                <span class="helper-text" data-error="Review must be between 20 and 150 characters"
+                                  data-success="Ready to go!"></span>
+                              </div>
+
+                            </div>
+                            <input value="{{ review._id }}" name="id" type="text" readonly="readonly" hidden>
+                          </div>
+                          <div class="modal-content">
+                            <button class="btn waves-effect waves-light center-align" id="delete-review" type="submit"
+                              name="action">Delete
+                            </button>
+                          </div>
+                          <h4 class="delete-success center-align">Review successfully deleted</h4>
+                          <h4 class="delete-error center-align"></h4>
+                        </div>
+                      </form>
+                      {% endif %}
                     </td>
                   </tr>
                   {% endif %}
