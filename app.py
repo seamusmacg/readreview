@@ -74,6 +74,12 @@ def get_catalogue():
   reviews = mongo.db.reviews.find()
   return render_template("catalogue.html", books=books, reviews=reviews)
 
+@app.route("/catalogue/delete_review", methods=[ 'GET','POST'])
+def delete_review():
+  if request.method == "POST":
+    review = Review()
+    return review.delete_review()
+
 
 @app.route('/profile/')
 @login_required
