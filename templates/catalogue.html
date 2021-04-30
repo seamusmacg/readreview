@@ -56,9 +56,9 @@
                       {{ review.review }}
                       <br>
                       <i class="submission">Submitted by {{ review.username.capitalize() }}
-                        {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }}</i>
+                        {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }} Last Edit: {{ review.edited.strftime('%Y-%m-%d %H:%M:%S') }}  </i>
                       <br>
-                      {% if review.username == session['user']['username'] %}
+                      {% if review.username == session['user']['username'] or review.username == "admin" %}
                       <a href="#modal-ed-{{ review._id }}" class="modify-review modal-trigger">Edit</a>&nbsp;<a
                         class="modify-review modal-trigger" href="#modal-{{ review._id }}">Delete</a>
                       <form name="delete_review" id="delete_review">
@@ -86,7 +86,7 @@
                               <div class="input-field">
 
                                 <i class="material-icons prefix">mode_edit</i>
-                                <textarea id="edit-review" name="review" class="materialize-textarea validate"
+                                <textarea id="review-edit" name="review-edit" class="materialize-textarea validate"
                                   minlength="20" maxlength="150" pattern="^[a-zA-Z0-9]{20,150}$"
                                   required>{{ review.review }}</textarea>
                                 <label for="review">Review</label>
@@ -95,15 +95,15 @@
                               </div>
 
                             </div>
-                            <input value="{{ review._id }}" name="id" type="text" readonly="readonly" hidden>
+                            <input value="{{ review._id }}" name="id-edit" type="text" readonly="readonly" hidden>
                           </div>
                           <div class="modal-content">
-                            <button class="btn waves-effect waves-light center-align" id="delete-review" type="submit"
-                              name="action">Delete
+                            <button class="btn waves-effect waves-light center-align" id="edit-review" type="submit"
+                              name="action">Update
                             </button>
                           </div>
-                          <h4 class="delete-success center-align">Review successfully deleted</h4>
-                          <h4 class="delete-error center-align"></h4>
+                          <h4 class="edit-success center-align">Review successfully updated</h4>
+                          <h4 class="edit-error center-align"></h4>
                         </div>
                       </form>
                       {% endif %}
