@@ -78,7 +78,9 @@ class Review:
       "review": request.form.get("review"),
       "username": session['user']["username"],
       "title": request.form.get("title"),
-      "date": datetime.datetime.utcnow()
+      "date": datetime.datetime.utcnow(),
+      "edited": datetime.datetime.utcnow()
+      
       
     }
     already_submitted = mongo.db.reviews.find_one({"title": review['title'], "username": review['username']})
@@ -111,4 +113,29 @@ class Review:
       return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
     else:
       return json.dumps({'error': "Sorry, that review doesn't exist"}), 400, {'ContentType':'application/json'}
+    
+    
+  def edit_review(self):
+      
+      # review = {
+      # "review": request.form.get("review-edit"),
+      # "username": session['user']["username"],
+      # "title": request.form.get("title"),
+      # "date": datetime.datetime.utcnow()
+      # }
+      
+      # edit_review = mongo.db.reviews.update({"_id": ObjectId(request.form.get("id-edit"))}, review)
+      edit_review = mongo.db.reviews.find_one_and_update(
+        {"_id": ObjectId(request.form.get("id-edit"))}, 
+        {"$set": 
+          { "review": request.form.get("review-edit"),
+           "edited": datetime.datetime.utcnow()}  
+        },upsert=True
+        )
+      
+      if edit_review: 
+        return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+      else:
+        return json.dumps({'error': "Sorry can't edit review"}), 400, {'ContentType':'application/json'}
+      
       
