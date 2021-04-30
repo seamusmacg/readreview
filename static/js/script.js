@@ -123,6 +123,41 @@ $("form[name=delete_review]").submit(function (e) {
 });
 
 
+$("form[name=edit_review]").submit(function (e) {
+
+  var $form = $(this);
+  var $error = $form.find(".error");
+  var data = $form.serialize();
+
+  $.ajax({
+    url: "/catalogue/edit_review/",
+    type: "POST",
+    data: data,
+    dataType: "json",
+    success: function (resp) {
+      $(".modal-content").hide();
+      $(".edit-success").css("display", "block");
+      setTimeout(function () {
+        window.location.href = "/catalogue";
+      }, 4000);
+
+    },
+    error: function (resp) {
+      // $error.text(resp.responseJSON.error).removeClass("error-hidden");
+      $(".modal-content").hide();
+      $(".edit-error").text(resp.responseJSON.error);
+      $(".edit-error").css("display", "block");
+      setTimeout(function () {
+        window.location.href = "/catalogue";
+      }, 4000);
+    }
+
+  })
+
+  e.preventDefault();
+});
+
+
 function togglePassword() {
   var password_input = document.getElementById("password");
 
