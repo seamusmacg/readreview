@@ -180,6 +180,21 @@
   padding-top: 40px;
 }
 
+.edit-success {
+  color: green; 
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+.edit-error {
+  color: red; 
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
 .modify-review {
   color: #722F37;
 }
