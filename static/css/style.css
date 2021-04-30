@@ -203,6 +203,11 @@ td a:hover {
   color: #a27840;
 }
 
+.vote {
+  font-size: 16px;
+  line-height: 23px;
+}
+
 
  /* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
  [type="checkbox"]:checked+span:not(.lever):before {
