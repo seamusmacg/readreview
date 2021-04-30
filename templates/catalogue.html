@@ -41,6 +41,19 @@
                   <tr>
                     <td><strong style="font-weight: bold;">Summary:</strong> {{ book.summary }}</td>
                   </tr>
+                  <thead>
+                    <tr>
+                      <th>Votes</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>
+                      <span><i class="material-icons prefix">thumb_up</i></span>
+                      <span><h4 style="display: inline-block; color: green;">{{ book.upvotes }}</h4></span>
+                      <span><i class="material-icons prefix">thumb_down</i></span>
+                      <span><h4 style="display: inline-block; color: red">{{ book.downvotes }}</h4></span>
+                    </td>
+                  </tr>
 
                   <thead>
                     <tr>
