@@ -79,6 +79,13 @@ def delete_review():
   if request.method == "POST":
     review = Review()
     return review.delete_review()
+  
+  
+@app.route("/catalogue/edit_review/", methods=[ 'GET','POST'])
+def edit_review():
+  if request.method == "POST":
+    review = Review()
+    return review.edit_review()
 
 
 @app.route('/profile/')
