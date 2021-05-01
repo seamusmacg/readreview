@@ -48,10 +48,14 @@
                   </thead>
                   <tr>
                     <td>
-                      <span><i class="material-icons prefix">thumb_up</i></span>
-                      <span><h4 style="display: inline-block; color: green;">{{ book.upvotes }}</h4></span>
-                      <span><i class="material-icons prefix">thumb_down</i></span>
-                      <span><h4 style="display: inline-block; color: red">{{ book.downvotes }}</h4></span>
+                      <span><i class="material-icons prefix" style="color: green;">thumb_up</i></span>
+                      <span>
+                        <h4 style="display: inline-block; color: green;">{{ book.upvotes }}</h4>
+                      </span>
+                      <span><i class="material-icons prefix" style="color: red;">thumb_down</i></span>
+                      <span>
+                        <h4 style="display: inline-block; color: red">{{ book.downvotes }}</h4>
+                      </span>
                     </td>
                   </tr>
 
@@ -69,9 +73,10 @@
                       {{ review.review }}
                       <br>
                       <i class="submission">Submitted by {{ review.username.capitalize() }}
-                        {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }} Last Edit: {{ review.edited.strftime('%Y-%m-%d %H:%M:%S') }}  </i>
+                        {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }} Last Edit:
+                        {{ review.edited.strftime('%Y-%m-%d %H:%M:%S') }} </i>
                       <br>
-                      {% if review.username == session['user']['username'] or review.username == "admin" %}
+                      {% if review.username == session['user']['username'] or session['user']['username']  == "admin" %}
                       <a href="#modal-ed-{{ review._id }}" class="modify-review modal-trigger">Edit</a>&nbsp;<a
                         class="modify-review modal-trigger" href="#modal-{{ review._id }}">Delete</a>
                       <form name="delete_review" id="delete_review">
@@ -150,6 +155,22 @@
                             <span class="helper-text" data-error="Review must be between 20 and 150 characters"
                               data-success="Ready to go!"></span>
                           </div>
+                          <p>
+                            <label>
+                              <i class="material-icons prefix" style="color: green;">thumb_up</i>
+                              <input name="group1" type="radio" value="thumb-up" checked/>
+                              <span>Red</span>
+                            </label>
+                          </p>
+                          <p>
+                            <label>
+                              <i class="material-icons prefix" style="color: red;">thumb_down</i>
+                              <input name="group1" type="radio" value="thumb-down"/>
+                              <span>Yellow</span>
+                            </label>
+                          </p>
+                          <input value="{{ book._id }}" name="book-id" type="text" readonly="readonly" hidden>
+
 
                         </div>
                         <p class="error error--hidden"></p>
