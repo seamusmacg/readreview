@@ -10,6 +10,12 @@
         <div class="collapsible-header">
           <i class="fas fa-angle-down"></i>
           <strong>{{ book.title }}</strong>
+          {% if session['logged_in'] %}
+            {% if book.username == session['user']['username'] or session['user']['username']  == "admin" %}
+            <button class="btn waves-effect waves-light btn-small" type="submit" name="action">Delete
+          </button>
+            {% endif %}
+          {% endif %}
         </div>
         <div class="collapsible-body">
           <div class="row">
@@ -76,7 +82,8 @@
                         {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }} Last Edit:
                         {{ review.edited.strftime('%Y-%m-%d %H:%M:%S') }} </i>
                       <br>
-                      {% if review.username == session['user']['username'] or session['user']['username']  == "admin" %}
+                      {% if session['logged_in'] %}
+                       {% if review.username == session['user']['username'] or session['user']['username']  == "admin" %}
                       <a href="#modal-ed-{{ review._id }}" class="modify-review modal-trigger">Edit</a>&nbsp;<a
                         class="modify-review modal-trigger" href="#modal-{{ review._id }}">Delete</a>
                       <form name="delete_review" id="delete_review">
@@ -125,10 +132,12 @@
                         </div>
                       </form>
                       {% endif %}
+                    {% endif %}
                     </td>
                   </tr>
                   {% endif %}
                   {% endfor %}
+                  {% if session['logged_in'] %}
                   <tr>
                     <form name="add_review" id="review_form">
                       <thead>
@@ -195,13 +204,19 @@
                       </td>
                     </form>
                   </tr>
+                  {% else %}
+                  <tr>
+                    <td><strong style="font-weight: bold;"><a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a> to leave a review</strong></td>
+                  </tr>
+                  {% endif %}
+
                 </tbody>
               </table>
             </div>
           </div>
         </div>
       </li>
-      {% endfor %}
+    {% endfor %}
     </ul>
 
   </div>
