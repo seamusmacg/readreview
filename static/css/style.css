@@ -217,8 +217,13 @@ td a:hover {
 
  }
 
+ [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+  background-color: #722F37;
+}
 
-
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+  border: 2px solid #722F37;
+}
  .card-action {
    background-color: #00001a !important;
    color: #a27840 !important;
