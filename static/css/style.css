@@ -105,6 +105,7 @@
 .collapsible-header {
   background-color: #00001a;
   color: white;
+  padding-bottom: 1.3rem;
 }
 
 .collapsible-header i {
@@ -121,6 +122,14 @@
 
 .catalogue .btn {
   background-color: #00001a;
+}
+
+tr a {
+  color: #722F37 !important;
+}
+
+tr a:hover {
+  color: #a27840 !important;
 }
 
 
@@ -203,9 +212,12 @@ td a:hover {
   color: #a27840;
 }
 
-.vote {
-  font-size: 16px;
-  line-height: 23px;
+.collapsible-header button {
+  background-color: #a27840 !important;
+  position: absolute !important;
+  right: 40px !important;
+  text-align: center !important;
+  display: inline-block !important;
 }
 
 
