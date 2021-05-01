@@ -86,10 +86,33 @@ class Review:
     already_submitted = mongo.db.reviews.find_one({"title": review['title'], "username": review['username']})
     if already_submitted:
       return json.dumps({'error': "Sorry, user has already submitted a review for this book"}), 400, {'ContentType':'application/json'} 
+    
     existing_title = mongo.db.reviews.find_one({"title": review['title']})
     
     if existing_title:
+      # thumbs_up = request.form.get("group1", "thumb-up")
+      # thumbs_down = request.form.get("group1", "thumb-down")
+      checked = request.form.get("group1")
+      if checked == "thumb-up":
+        upvote = mongo.db.books.find_one_and_update(
+        {"_id": ObjectId(request.form.get("book-id"))}, 
+        {"$inc": 
+          { "upvotes": 1}
+        }
+        )
+      else:
+        if checked ==  "thumb-down":
+          downvote = mongo.db.books.find_one_and_update(
+            {"_id": ObjectId(request.form.get("book-id"))}, 
+            {"$inc": 
+              { "downvotes": 1}
+            }
+            )
+        
+      
+        
       new_review = mongo.db.reviews.insert_one(review)
+      
       return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
     else:
       return jsonify({"error": "Sorry, book title does not exist"}), 400
