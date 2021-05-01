@@ -1,319 +1,319 @@
- /* All elements */
- * {
-   font-family: 'Goudy Bookletter 1911', serif;
-   letter-spacing: 2px;
- }
+/* All elements */
+* {
+  font-family: 'Goudy Bookletter 1911', serif;
+  letter-spacing: 2px;
+}
 
- body {
-   background-color: #722F37;
- }
+body {
+  background-color: #722F37;
+}
 
- .main-title {
-   color: #bdadad;
- }
+.main-title {
+  color: #bdadad;
+}
 
- .icon-block #final-paragraph {
-   font-weight: bold;
-   text-align: center;
-   color: white;
- }
+.icon-block #final-paragraph {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
 
- .icon-block p {
-   font-size: larger;
- }
+.icon-block p {
+  font-size: larger;
+}
 
- .about-icon {
-   text-align: center;
-   color: #00001a;
- }
+.about-icon {
+  text-align: center;
+  color: #00001a;
+}
 
- .about-title {
-   text-align: center;
-   color: #a27840;
- }
+.about-title {
+  text-align: center;
+  color: #a27840;
+}
 
- .page-footer {
-   background-color: #00001a;
- }
+.page-footer {
+  background-color: #00001a;
+}
 
- .headers {
-   color: #a27840;
- }
+.headers {
+  color: #a27840;
+}
 
- .nav-bg-color {
-   background-color: white;
- }
+.nav-bg-color {
+  background-color: white;
+}
 
- .work-links {
-   color: white;
- }
+.work-links {
+  color: white;
+}
 
- .fa {
-   font-size: 1.7rem;
-   padding: 5px;
- }
+.fa {
+  font-size: 1.7rem;
+  padding: 5px;
+}
 
- .social-icons {
-   display: inline;
- }
+.social-icons {
+  display: inline;
+}
 
- footer i:hover {
-   color: #a27840;
- }
+footer i:hover {
+  color: #a27840;
+}
 
- footer a:hover {
-   color: #a27840;
- }
+footer a:hover {
+  color: #a27840;
+}
 
- .form-container {
-   min-height: calc(100vh - 60px);
-   margin-top: 80px;
- }
-
- .form-link {
-   color: #a27840;
- }
-
- form a:hover {
-   color: #00001a;
- }
-
- .catalogue-container {
+.form-container {
   min-height: calc(100vh - 60px);
   margin-top: 80px;
- }
+}
 
- .error {
-   color: red;
-   text-align: center;
-   padding: 2px;
-   font-size: larger;
-   font-weight: bold;
- }
+.form-link {
+  color: #a27840;
+}
+
+form a:hover {
+  color: #00001a;
+}
+
+.catalogue-container {
+ min-height: calc(100vh - 60px);
+ margin-top: 80px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  padding: 2px;
+  font-size: larger;
+  font-weight: bold;
+}
 
 
- .collapsible-body {
-   background-color: #bdadad;
- }
+.collapsible-body {
+  background-color: #bdadad;
+}
 
 
 .collapsible-body img {
-  box-shadow: 5px 5px 5px rgba(0,0,0, 0.7);
+ box-shadow: 5px 5px 5px rgba(0,0,0, 0.7);
 }
 
 
 .collapsible-header {
-  background-color: #00001a;
-  color: white;
-  padding-bottom: 1.3rem;
+ background-color: #00001a;
+ color: white;
+ padding-bottom: 1.3rem;
 }
 
 .collapsible-header i {
-  color: #a27840;
+ color: #a27840;
 }
 
 .submission {
-  color: #8d5205 ;
+ color: #8d5205 ;
 }
 
 .catalogue .material-icons {
-  color: #722F37;
+ color: #722F37;
 }
 
 .catalogue .btn {
-  background-color: #00001a;
+ background-color: #00001a;
 }
 
 tr a {
-  color: #722F37 !important;
+ color: #722F37 !important;
 }
 
 tr a:hover {
-  color: #a27840 !important;
+ color: #a27840 !important;
 }
 
 
- /* https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen */
- input:focus {
-   border-bottom: 1px solid #00001a !important;
-   box-shadow: 0 1px 0 0 #00001a !important;
- }
+/* https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen */
+input:focus {
+  border-bottom: 1px solid #00001a !important;
+  box-shadow: 0 1px 0 0 #00001a !important;
+}
 
- textarea:focus {
-   border-bottom: 1px solid #00001a !important;
-   box-shadow: 0 1px 0 0 #00001a !important;
- }
+textarea:focus {
+  border-bottom: 1px solid #00001a !important;
+  box-shadow: 0 1px 0 0 #00001a !important;
+}
 
 .catalogue .input-field .prefix.active {
-  color: #00001a !important;
+ color: #00001a !important;
 }
 
 .catalogue .input-field label.active {
-  color: #00001a !important;
+ color: #00001a !important;
 }
 
 .modal { 
-  width: 50% !important ; 
-  height: 30% !important ; 
+ width: 50% !important ; 
+ height: 30% !important ; 
 } 
 
 .modal a {
-  color: #a27840;
+ color: #a27840;
 }
 
 .review-success {
-  color: green; 
-  display: none;
-  text-align: center;
-  padding-top: 40px;
+ color: green; 
+ display: none;
+ text-align: center;
+ padding-top: 40px;
 }
 
 .review-error {
-  color: red; 
-  display: none;
-  text-align: center;
-  padding-top: 40px;
+ color: red; 
+ display: none;
+ text-align: center;
+ padding-top: 40px;
 }
 .delete-success {
-  color: green; 
-  display: none;
-  text-align: center;
-  padding-top: 40px;
+ color: green; 
+ display: none;
+ text-align: center;
+ padding-top: 40px;
 }
 
 
 .delete-error {
-  color: red; 
-  display: none;
-  text-align: center;
-  padding-top: 40px;
+ color: red; 
+ display: none;
+ text-align: center;
+ padding-top: 40px;
 }
 
 .edit-success {
-  color: green; 
-  display: none;
-  text-align: center;
-  padding-top: 40px;
+ color: green; 
+ display: none;
+ text-align: center;
+ padding-top: 40px;
 }
 
 
 .edit-error {
-  color: red; 
-  display: none;
-  text-align: center;
-  padding-top: 40px;
+ color: red; 
+ display: none;
+ text-align: center;
+ padding-top: 40px;
 }
 
 .modify-review {
-  color: #722F37;
+ color: #722F37;
 }
 
 td a:hover {
-  color: #a27840;
+ color: #a27840;
 }
 
 .collapsible-header button {
-  background-color: #a27840 !important;
-  position: absolute !important;
-  right: 40px !important;
-  text-align: center !important;
-  display: inline-block !important;
+ background-color: #a27840 !important;
+ position: absolute !important;
+ right: 40px !important;
+ text-align: center !important;
+ display: inline-block !important;
 }
 
 
- /* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
- [type="checkbox"]:checked+span:not(.lever):before {
+/* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
+[type="checkbox"]:checked+span:not(.lever):before {
 
-   border-right: 2px solid #a27840 !important;
-   border-bottom: 2px solid #a27840 !important;
+  border-right: 2px solid #a27840 !important;
+  border-bottom: 2px solid #a27840 !important;
 
- }
+}
 
- [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
-  background-color: #722F37;
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+ background-color: #722F37;
 }
 
 [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
-  border: 2px solid #722F37;
+ border: 2px solid #722F37;
 }
- .card-action {
-   background-color: #00001a !important;
-   color: #a27840 !important;
- }
-
- .general-btn {
+.card-action {
   background-color: #00001a !important;
+  color: #a27840 !important;
+}
+
+.general-btn {
+ background-color: #00001a !important;
+ width: 100%;
+}
+
+#welcome-message {
+  font-size: x-large;
+  padding-bottom: 12px;
+}
+
+
+/* Custom CSS Parallax Template */
+nav ul a,
+nav .brand-logo {
+  color: #00001a;
+}
+
+/* Custom CSS Parallax Template */
+p {
+  line-height: 2rem;
+}
+
+/* Custom CSS Parallax Template */
+.sidenav-trigger {
+  color: #00001a;
+}
+
+/* Custom CSS Parallax Template */
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, .9);
+}
+
+/* Custom CSS Parallax Template */
+.parallax-container .section {
   width: 100%;
- }
+}
 
- #welcome-message {
-   font-size: x-large;
-   padding-bottom: 12px;
- }
+/* Custom CSS media queries Parallax Template */
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
 
+  #index-banner .section {
+    top: 10%;
+  }
+}
 
- /* Custom CSS Parallax Template */
- nav ul a,
- nav .brand-logo {
-   color: #00001a;
- }
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
 
- /* Custom CSS Parallax Template */
- p {
-   line-height: 2rem;
- }
+/* Custom CSS Parallax Template */
+.icon-block {
+  padding: 0 15px;
+}
 
- /* Custom CSS Parallax Template */
- .sidenav-trigger {
-   color: #00001a;
- }
+/* Custom CSS Parallax Template */
+.icon-block .material-icons {
+  font-size: inherit;
+}
 
- /* Custom CSS Parallax Template */
- .parallax-container {
-   min-height: 380px;
-   line-height: 0;
-   height: auto;
-   color: rgba(255, 255, 255, .9);
- }
+/* Custom CSS Parallax Template */
+footer.page-footer {
+  margin: 0;
+}
 
- /* Custom CSS Parallax Template */
- .parallax-container .section {
-   width: 100%;
- }
-
- /* Custom CSS media queries Parallax Template */
- @media only screen and (max-width : 992px) {
-   .parallax-container .section {
-     position: absolute;
-     top: 40%;
-   }
-
-   #index-banner .section {
-     top: 10%;
-   }
- }
-
- @media only screen and (max-width : 600px) {
-   #index-banner .section {
-     top: 0;
-   }
- }
-
- /* Custom CSS Parallax Template */
- .icon-block {
-   padding: 0 15px;
- }
-
- /* Custom CSS Parallax Template */
- .icon-block .material-icons {
-   font-size: inherit;
- }
-
- /* Custom CSS Parallax Template */
- footer.page-footer {
-   margin: 0;
- }
-
- .img {
-   opacity: 0.2;
- }
+.img {
+  opacity: 0.2;
+}
