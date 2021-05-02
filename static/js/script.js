@@ -66,7 +66,6 @@ $("form[name=login]").submit(function (e) {
 $("form[name=add_review]").submit(function (e) {
 
   var $form = $(this);
-  var $error = $form.find(".error");
   var data = $form.serialize();
 
   $.ajax({
@@ -102,7 +101,6 @@ $("form[name=add_review]").submit(function (e) {
 $("form[name=delete_review]").submit(function (e) {
 
   var $form = $(this);
-  var $error = $form.find(".error");
   var data = $form.serialize();
 
   $.ajax({
@@ -137,7 +135,6 @@ $("form[name=delete_review]").submit(function (e) {
 $("form[name=edit_review]").submit(function (e) {
 
   var $form = $(this);
-  var $error = $form.find(".error");
   var data = $form.serialize();
 
   $.ajax({
@@ -172,7 +169,6 @@ $("form[name=edit_review]").submit(function (e) {
 $("form[name=delete_book]").submit(function (e) {
 
   var $form = $(this);
-  var $error = $form.find(".error");
   var data = $form.serialize();
 
   $.ajax({
@@ -207,7 +203,6 @@ $("form[name=delete_book]").submit(function (e) {
 $("form[name=submit_book]").submit(function (e) {
 
   var $form = $(this);
-  var $error = $form.find(".error");
   var data = $form.serialize();
 
   $.ajax({
