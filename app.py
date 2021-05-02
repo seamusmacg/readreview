@@ -112,6 +112,14 @@ def delete_book():
   if request.method == "POST":
     book = Book()
     return book.delete_book()
+  
+@app.route("/search", methods=["GET", "POST"])
+def search():
+  query = request.form.get("query")
+  books = mongo.db.books.find({"$text": {"$search": query}})
+  books = list(books)
+  return render_template("catalogue.html", books=books)
+  
 
 
 if __name__ == "__main__":
