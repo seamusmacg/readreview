@@ -13,59 +13,66 @@
             </div>
             <div class="card-content grey lighten-2">
               <div class="input-field">
-                <label for="book-title">Title</label>
-                <input type="text" id="book-title" name="book-title" minlength="4" maxlength="100" class="validate" required>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" minlength="4" maxlength="100" class="validate"
+                  required>
                 <span class="helper-text" data-error="Book must be between 2 and 100 characters"></span>
               </div><br>
-             
+
               <div class="input-field">
                 <label for="author">Author</label>
-                <input type="text" id="author" name="author" minlength="8" maxlength="20"
-                  class="validate" required>
+                <input type="text" id="author" name="author" minlength="8" maxlength="20" class="validate" required>
                 <span class="helper-text" data-error="Author must be between 2 and 50 characters"></span>
               </div><br>
 
               <div class="input-field">
                 <label for="genre">Genre</label>
-                <input type="text" id="genre" name="genre" minlength="2" maxlength="50"
-                  class="validate" required>
+                <input type="text" id="genre" name="genre" minlength="2" maxlength="50" class="validate" required>
                 <span class="helper-text" data-error="Genre must be between 2 and 50 characters"></span>
               </div><br>
 
               <div class="row">
                 <div class="input-field col s6">
                   <label for="year">Year</label>
-                  <input type="text" id="year" name="year" minlength="4" maxlength="4" 
-                    class="validate" required>
+                  <input type="text" id="year" name="year" minlength="4" maxlength="4" class="validate" required>
                   <span class="helper-text" data-error="Enter 4 digit year of publication"></span>
                 </div>
 
                 <div class="input-field col s6">
                   <label for="pages">Pages</label>
-                  <input type="text" id="pages" name="pages" minlength="1" maxlength="100"
-                     class="validate" required>
+                  <input type="text" id="pages" name="pages" minlength="1" maxlength="100" class="validate" required>
                   <span class="helper-text" data-error="Enter number of pages in book"></span>
                 </div>
               </div>
 
               <div class="input-field">
                 <label for="cover">Book Cover</label>
-                <input type="text" id="cover" name="cover" minlength="4" maxlength="200"
-                  class="validate" required>
+                <input type="text" id="cover" name="cover" minlength="4" maxlength="200" class="validate" required>
                 <span class="helper-text" data-error="Enter URL of image (Project Gutenberg recommended)"></span>
               </div><br>
 
               <div class="input-field">
                 <label for="summary">Summary</label>
                 <textarea type="text" id="summary" name="summary" minlength="10" maxlength="100"
-                   class="materialize-textarea validate" required></textarea>
+                  class="materialize-textarea validate" required></textarea>
               </div>
 
 
               <p class="error error--hidden"></p>
 
               <div class="input-field">
-                <button class="btn-large waves-effect waves-dark general-btn" type="submit">Submit Book</button>
+                <button data-target="book-submit" class="btn-large waves-effect waves-dark general-btn"
+                  type="submit">Submit Book</button>
+              </div>
+              <div id="book-submit" class="modal">
+                <div class="modal-content center-align book-modal">
+                  <h4>Book submitted successfully</h4>
+                </div>
+                <div class="modal-content center-align">
+                  <a class="btn waves-effect waves-light book-modal-btn" href="{{ url_for('submit_book') }}">Add
+                    Another</a>
+                </div>
+                <h4 class="book-error center-align"></h4>
               </div>
             </div>
           </div>
