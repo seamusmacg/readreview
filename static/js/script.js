@@ -137,6 +137,7 @@ $("form[name=edit_review]").submit(function (e) {
     data: data,
     dataType: "json",
     success: function (resp) {
+      $(".modal-content").hide();
       $(".edit-success").css("display", "block");
       setTimeout(function () {
         window.location.href = "/catalogue";
@@ -145,8 +146,43 @@ $("form[name=edit_review]").submit(function (e) {
     },
     error: function (resp) {
       // $error.text(resp.responseJSON.error).removeClass("error-hidden");
+      $(".modal-content").hide();
       $(".edit-error").text(resp.responseJSON.error);
       $(".edit-error").css("display", "block");
+      setTimeout(function () {
+        window.location.href = "/catalogue";
+      }, 4000);
+    }
+
+  })
+
+  e.preventDefault();
+});
+
+$("form[name=delete_book]").submit(function (e) {
+
+  var $form = $(this);
+  var $error = $form.find(".error");
+  var data = $form.serialize();
+
+  $.ajax({
+    url: "/catalogue/delete_book",
+    type: "POST",
+    data: data,
+    dataType: "json",
+    success: function (resp) {
+      $(".modal-content").hide();
+      $(".delete-success").css("display", "block");
+      setTimeout(function () {
+        window.location.href = "/catalogue";
+      }, 4000);
+
+    },
+    error: function (resp) {
+      // $error.text(resp.responseJSON.error).removeClass("error-hidden");
+      $(".modal-content").hide();
+      $(".delete-error").text(resp.responseJSON.error);
+      $(".delete-error").css("display", "block");
       setTimeout(function () {
         window.location.href = "/catalogue";
       }, 4000);
