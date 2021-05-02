@@ -193,6 +193,39 @@ $("form[name=delete_book]").submit(function (e) {
   e.preventDefault();
 });
 
+$("form[name=submit_book]").submit(function (e) {
+
+  var $form = $(this);
+  var $error = $form.find(".error");
+  var data = $form.serialize();
+
+  $.ajax({
+    url: "/book/",
+    type: "POST",
+    data: data,
+    dataType: "json",
+    success: function (resp) {
+      $('#book-submit').modal('open');
+      setTimeout(function () {
+        window.location.href = "/book/";
+      }, 5000);
+
+    },
+    error: function (resp) {
+      $('#book-submit').modal('open');
+      $(".modal-content").hide();
+      $(".book-error").text(resp.responseJSON.error);
+      $(".book-error").css("display", "block");
+      setTimeout(function () {
+        window.location.href = "/book/";
+      }, 4000);
+    }
+
+  })
+
+  e.preventDefault();
+});
+
 
 function togglePassword() {
   var password_input = document.getElementById("password");
