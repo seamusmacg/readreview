@@ -95,10 +95,17 @@ def edit_review():
 def get_profile():
   return render_template("profile.html")
 
-@app.route('/book/')
+
+
+@app.route('/book/', methods=['GET', 'POST'])
 @login_required
 def submit_book():
+  if request.method == "POST":
+    book = Book()
+    return book.submit_book()
+    
   return render_template("book.html")
+
 
 @app.route("/catalogue/delete_book", methods=[ 'GET','POST'])
 def delete_book():
