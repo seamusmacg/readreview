@@ -204,8 +204,26 @@ textarea:focus {
  padding-top: 40px;
 }
 
+.book-error {
+ color: red; 
+ display: none;
+ text-align: center;
+ padding-top: 40px;
+}
+
+
+
 .modify-review {
  color: #722F37;
+}
+
+.book-modal {
+  color: green;
+}
+
+.book-modal-btn {
+  background-color: #00001a !important;
+  color: white !important;
 }
 
 td a:hover {
