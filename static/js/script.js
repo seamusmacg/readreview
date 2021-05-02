@@ -204,20 +204,55 @@ function togglePassword() {
   }
 }
 
+// $(".submit-btn").click(function () {
+//   if ( document.getElementsByName("review").val().length < 10 ) {
+//     alert("error!");
+//   }
+
+// });
+
+// for (let j = 0; j < 10; j++) {
+//   $(".submit-btn").click(function () {
+//     var textarea = document.getElementsByName("review")[j].value;
+//     var input = document.getElementsByName("title")[j].value;
+//     console.log(textarea)
+//     console.log(input)
+//     if (textarea.length < 20 || textarea.length > 150) {
+//       $("button").removeClass("modal-trigger");
+//       $("p").removeClass("error--hidden");
+//       $(".error").html("Reviews must be between 20 and 150 characters long");
+//       setTimeout(function () {
+//         $("p").addClass("error--hidden");
+//         $(".error").empty();
+//         $("button").addClass("modal-trigger");
+//       }, 4000);
+//     }
+//   });
+// }
+
+// $(document).ready(function(){
+//   $('.submit-btn').attr('disabled',true);
+//   $('.review').keyup(function(){
+//       if($(this).val().length !=0)
+//           $('.review').attr('disabled', false);            
+//       else
+//           $('.review').attr('disabled',true);
+//   })
+// });
+
 
 // $(".submit-btn").click(function () {
-//   // var textarea = document.getElementsByClassName("review").value;
-//   // if (textarea.length < 20 || textarea.length > 150) {
-//     $("button").removeClass("modal-trigger");
-//     $("p").removeClass("error--hidden");
-//     $(".error").html("Reviews must be between 20 and 150 characters long");
-//     setTimeout(function () {
-//       $("p").addClass("error--hidden");
-//       $(".error").empty();
-//       $("button").addClass("modal-trigger");
-//     }, 4000);
-//   // }
+//   $("[name='review']").each(function (index, value) {
+//     // if (this.id.value == "") {
+//     //   $("button").removeClass("modal-trigger");
+//     // }
+//     if (this.value == "" ){
+//       $(this).reset();
+//     } 
+//   });
 // });
+
+
 
 $(".submit-review").click(function () {
   $(".modal-content").hide();
