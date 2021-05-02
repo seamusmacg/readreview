@@ -23,6 +23,7 @@
     </div>
 
     <!-- Collapsible of books -->
+    {% if books|length > 0 %}
     <ul class="collapsible popout">
       {% for book in books %}
       <li>
@@ -226,7 +227,7 @@
 
                         </div>
                         <p class="error error--hidden"></p>
-                        <button data-target="modal-id-{{ book._id }}" type="button"
+                        <button data-target="modal-id-{{ book._id }}" type="button" name="btn-submit"
                           class="btn waves-effect waves-light modal-trigger submit-btn">Submit
                         </button>
                         <!-- Modal Structure -->
@@ -262,6 +263,9 @@
       </li>
       {% endfor %}
     </ul>
+    {% else %}
+        <h3 class="white-text center-align">No Results Found</h3>
+    {% endif %}
 
   </div>
 </section>
