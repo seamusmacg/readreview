@@ -34,14 +34,14 @@
               <div class="row">
                 <div class="input-field col s6">
                   <label for="year">Year</label>
-                  <input type="text" id="year" name="year" minlength="4" maxlength="4" class="validate" required>
+                  <input type="number" id="year" name="year" minlength="4" maxlength="4" class="validate" required>
                   <span class="helper-text" data-error="Enter 4 digit year of publication"></span>
                 </div>
 
                 <div class="input-field col s6">
                   <label for="pages">Pages</label>
-                  <input type="text" id="pages" name="pages" minlength="1" maxlength="100" class="validate" required>
-                  <span class="helper-text" data-error="Enter number of pages in book"></span>
+                  <input type="number" id="pages" name="pages" min="1" max="2000" class="validate" required>
+                  <span class="helper-text" data-error="Max 2000 page books"></span>
                 </div>
               </div>
 
