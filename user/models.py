@@ -90,8 +90,6 @@ class Review:
     existing_title = mongo.db.reviews.find_one({"title": review['title']})
     
     if existing_title:
-      # thumbs_up = request.form.get("group1", "thumb-up")
-      # thumbs_down = request.form.get("group1", "thumb-down")
       checked = request.form.get("group1")
       if checked == "thumb-up":
         upvote = mongo.db.books.find_one_and_update(
@@ -100,19 +98,16 @@ class Review:
           { "upvotes": 1}
         }
         )
-      else:
-        if checked ==  "thumb-down":
-          downvote = mongo.db.books.find_one_and_update(
+      elif checked ==  "thumb-down":
+        downvote = mongo.db.books.find_one_and_update(
             {"_id": ObjectId(request.form.get("book-id"))}, 
             {"$inc": 
               { "downvotes": 1}
             }
             )
         
-      
-        
-      new_review = mongo.db.reviews.insert_one(review)
-      
+    new_review = mongo.db.reviews.insert_one(review)
+    if new_review:
       return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
     else:
       return jsonify({"error": "Sorry, book title does not exist"}), 400
