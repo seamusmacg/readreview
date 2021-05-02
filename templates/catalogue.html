@@ -176,8 +176,8 @@
                           <div class="input-field">
 
                             <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="review" name="review" class="materialize-textarea validate review"
-                              minlength="20" maxlength="150" pattern="^[a-zA-Z0-9]{20,150}$" required></textarea>
+                            <textarea id="review-ta-{{ book._id }}" name="review" class="materialize-textarea validate review"
+                              minlength="20" maxlength="150" pattern="^[a-zA-Z0-9]{20,150}$" required="" aria-required="true" type></textarea>
                             <label for="review">Review</label>
                             <span class="helper-text" data-error="Review must be between 20 and 150 characters"
                               data-success="Ready to go!"></span>
@@ -201,7 +201,7 @@
 
                         </div>
                         <p class="error error--hidden"></p>
-                        <button data-target="modal-id-{{ book._id }}" type="button"
+                        <button data-target="modal-id-{{ book._id }}" type="button" 
                           class="btn waves-effect waves-light modal-trigger submit-btn">Submit
                         </button>
                         <!-- Modal Structure -->
