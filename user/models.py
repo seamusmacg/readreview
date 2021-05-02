@@ -162,3 +162,23 @@ class Review:
         return json.dumps({'error': "Sorry can't edit review"}), 400, {'ContentType':'application/json'}
       
       
+      
+      
+      
+class Book:
+  
+  
+  def delete_book(self):
+    
+    book = {
+      "_id": request.form.get("id")
+    }
+    
+    delete_book = mongo.db.books.remove({"_id": ObjectId(book['_id'])})
+     
+    if delete_book:
+      return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+    else:
+      return json.dumps({'error': "Sorry, book cannot be deleted"}), 400, {'ContentType':'application/json'}
+      
+      
