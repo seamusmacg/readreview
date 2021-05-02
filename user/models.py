@@ -167,6 +167,29 @@ class Review:
       
 class Book:
   
+  def submit_book(self):
+    # Create book object
+    book = {
+      "title": request.form.get("title"),
+      "username": session['user']["username"],
+      "author": request.form.get("author"),
+      "genre": request.form.get("genre"),
+      "pages": request.form.get("pages"),
+      "year": request.form.get("year"),
+      "image_url": request.form.get("cover"),
+      "summary": request.form.get("summary")
+    }
+    
+    existing_title = mongo.db.books.find_one({"title": book['title']})
+    
+    if existing_title:
+      return json.dumps({'error': "Sorry book already exists"}), 400, {'ContentType':'application/json'} 
+    else:
+             
+      new_book = mongo.db.books.insert_one(book)
+      
+      return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+    
   
   def delete_book(self):
     
