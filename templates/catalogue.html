@@ -5,17 +5,11 @@
   <div class="catalogue-container">
     <h1 class="center-align white-text">ReadReview Catalogue</h1>
     <ul class="collapsible popout">
-    {% for book in books %}
+      {% for book in books %}
       <li>
         <div class="collapsible-header">
           <i class="fas fa-angle-down"></i>
           <strong>{{ book.title }}</strong>
-          {% if session['logged_in'] %}
-            {% if book.username == session['user']['username'] or session['user']['username']  == "admin" %}
-            <button class="btn waves-effect waves-light btn-small" type="submit" name="action">Delete
-          </button>
-            {% endif %}
-          {% endif %}
         </div>
         <div class="collapsible-body">
           <div class="row">
@@ -27,7 +21,30 @@
               <table>
                 <thead>
                   <tr>
+                    {% if session['logged_in'] %}
+                    {% if book.username == session['user']['username'] or session['user']['username']  == "admin" %}
+                    <th>{{ book.title }} <a href="#modal-delete-{{ book._id }}" style="font-style: italic;"
+                        class="modal-trigger">Delete Book</a></th>
+                    <form name="delete_book">
+                    <!-- Modal Structure -->
+                    <div id="modal-delete-{{ book._id }}" class="modal center-align">
+                      <div class="modal-content">
+                        <h4>Delete this book?</h4>
+                        <input value="{{ book._id }}" name="id" type="text" readonly="readonly" hidden>
+                      </div>
+                      <div class="modal-content">
+                        <button class="btn waves-effect waves-light center-align delete book" type="submit"
+                          name="action">Delete
+                        </button>
+                      </div>
+                      <h4 class="delete-success center-align">Book successfully deleted</h4>
+                      <h4 class="delete-error center-align"></h4>
+                    </div>
+                    </form>
+                    {% else %}
                     <th>{{ book.title }}</th>
+                    {% endif %}
+                    {% endif %}
                   </tr>
                 </thead>
 
@@ -72,9 +89,9 @@
                   </thead>
 
                   {% for review in reviews %}
-                      {% if book.title == review.title %}
+                  {% if book.title == review.title %}
 
-                  
+
 
                   <tr>
                     <td>
@@ -84,8 +101,8 @@
                         {{ review.date.strftime('%Y-%m-%d %H:%M:%S') }} Last Edit:
                         {{ review.edited.strftime('%Y-%m-%d %H:%M:%S') }} </i>
                       <br>
-                       {% if session['logged_in'] %}
-                       {% if review.username == session['user']['username'] or session['user']['username']  == "admin" %}
+                      {% if session['logged_in'] %}
+                      {% if review.username == session['user']['username'] or session['user']['username']  == "admin" %}
                       <a href="#modal-ed-{{ review._id }}" class="modify-review modal-trigger">Edit</a>&nbsp;<a
                         class="modify-review modal-trigger" href="#modal-{{ review._id }}">Delete</a>
                       <form name="delete_review" id="delete_review">
@@ -125,8 +142,7 @@
                             <input value="{{ review._id }}" name="id-edit" type="text" readonly="readonly" hidden>
                           </div>
                           <div class="modal-content">
-                            <button class="btn waves-effect waves-light center-align" id="edit-review" type="submit"
-                              name="action">Update
+                            <button class="btn waves-effect waves-light center-align" type="submit" name="action">Update
                             </button>
                           </div>
                           <h4 class="edit-success center-align">Review successfully updated</h4>
@@ -134,10 +150,10 @@
                         </div>
                       </form>
                       {% endif %}
-                    {% endif %}
+                      {% endif %}
                     </td>
                   </tr>
-                      {% endif %}
+                  {% endif %}
                   {% endfor %}
                   {% if session['logged_in'] %}
                   <tr>
@@ -160,8 +176,8 @@
                           <div class="input-field">
 
                             <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="review" name="review" class="materialize-textarea validate review" minlength="20"
-                              maxlength="150" pattern="^[a-zA-Z0-9]{20,150}$" required></textarea>
+                            <textarea id="review" name="review" class="materialize-textarea validate review"
+                              minlength="20" maxlength="150" pattern="^[a-zA-Z0-9]{20,150}$" required></textarea>
                             <label for="review">Review</label>
                             <span class="helper-text" data-error="Review must be between 20 and 150 characters"
                               data-success="Ready to go!"></span>
@@ -169,14 +185,14 @@
                           <p>
                             <label>
                               <i class="material-icons prefix" style="color: green;">thumb_up</i>
-                              <input name="group1" type="radio" value="thumb-up" checked/>
+                              <input name="group1" type="radio" value="thumb-up" checked />
                               <span>Red</span>
                             </label>
                           </p>
                           <p>
                             <label>
                               <i class="material-icons prefix" style="color: red;">thumb_down</i>
-                              <input name="group1" type="radio" value="thumb-down"/>
+                              <input name="group1" type="radio" value="thumb-down" />
                               <span>Yellow</span>
                             </label>
                           </p>
@@ -185,7 +201,7 @@
 
                         </div>
                         <p class="error error--hidden"></p>
-                        <button data-target="modal-id-{{ book._id }}" type="button" 
+                        <button data-target="modal-id-{{ book._id }}" type="button"
                           class="btn waves-effect waves-light modal-trigger submit-btn">Submit
                         </button>
                         <!-- Modal Structure -->
@@ -208,7 +224,8 @@
                   </tr>
                   {% else %}
                   <tr>
-                    <td><strong style="font-weight: bold;"><a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a> to leave a review</strong></td>
+                    <td><strong style="font-weight: bold;"><a href="{{ url_for('login') }}">Login</a> or <a
+                          href="{{ url_for('register') }}">Register</a> to leave a review</strong></td>
                   </tr>
                   {% endif %}
 
@@ -218,7 +235,7 @@
           </div>
         </div>
       </li>
-    {% endfor %}
+      {% endfor %}
     </ul>
 
   </div>
