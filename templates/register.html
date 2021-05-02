@@ -14,19 +14,21 @@
             <div class="card-content grey lighten-2">
               <div class="input-field">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" minlength="4" maxlength="20" pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
+                <input type="text" id="username" name="username" minlength="4" maxlength="20"
+                  pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
                 <span class="helper-text" data-error="Username must be between 4 and 20 characters"></span>
               </div><br>
 
               <div class="input-field">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="8" maxlength="20" pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
+                <input type="password" id="password" name="password" minlength="8" maxlength="20"
+                  pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
                 <span class="helper-text" data-error="Password must be between 8 and 20 characters"></span>
               </div><br>
 
               <div class="form-field">
                 <label>
-                  <input type="checkbox" onclick="togglePassword()"/>
+                  <input type="checkbox" onclick="togglePassword()" />
                   <span>Show Password</span>
                 </label>
               </div><br>

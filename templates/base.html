@@ -25,15 +25,14 @@
       <!-- Top Navbar -->
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('get_home') }}">Home</a></li>
-        <li><a href="#">Catalogue</a></li>
+        <li><a href="{{ url_for('get_catalogue') }}">Catalogue</a></li>
         {% if session.user %}
-            <li><a href="{{ url_for('get_profile') }}">Profile</a></li>
-            <li><a href="#">Add Book</a></li>
-            <li><a href="#">Manage Catalogue</a></li>
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        <li><a href="{{ url_for('get_profile') }}">Profile</a></li>
+        <li><a href="{{ url_for('submit_book') }}">Submit Book</a></li>
+        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
         {% endif %}
       </ul>
 
@@ -44,14 +43,14 @@
         </li>
         <li><a href="{{ url_for('get_home') }}">Home</a></li>
         {% if session.user %}
-            <li><a href="{{ url_for('get_profile') }}">Profile</a></li>
-            <li><a href="#">Catalogue</a></li>
-            <li><a href="#">Add Book</a></li>
-            <li><a href="#">Manage Catalogue</a></li>
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        <li><a href="{{ url_for('get_profile') }}">Profile</a></li>
+        <li><a href="#">Catalogue</a></li>
+        <li><a href="#">Add Book</a></li>
+        <li><a href="#">Manage Catalogue</a></li>
+        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
         {% endif %}
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -62,7 +61,7 @@
   {% block content %}
   {% endblock %}
 
-
+  <!-- Footer -->
   <footer class="page-footer">
     <div class="container">
       <div class="row">

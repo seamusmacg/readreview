@@ -5,6 +5,7 @@
   <div class="catalogue-container">
     <h1 class="center-align white-text">ReadReview Catalogue</h1>
     <div class="row">
+      <!-- Search Form -->
       <form action="{{ url_for('search') }}" method="post" class="col s12">
         <div class="row center-align white-text">
           <div class="input-field col s12">
@@ -21,6 +22,7 @@
       </form>
     </div>
 
+    <!-- Collapsible of books -->
     <ul class="collapsible popout">
       {% for book in books %}
       <li>
@@ -97,6 +99,11 @@
                         <h4 style="display: inline-block; color: red">{{ book.downvotes }}</h4>
                       </span>
                     </td>
+                  </tr>
+                  <tr>
+                    <td><strong style="font-weight: bold;"><a
+                          href="https://www.amazon.co.uk/s?k={{ book.title }}&i=stripbooks" target="_blank"> Find
+                          it on Amazon</a></strong></td>
                   </tr>
 
                   <thead>
@@ -203,14 +210,14 @@
                           <p>
                             <label>
                               <i class="material-icons prefix" style="color: green;">thumb_up</i>
-                              <input name="group1" type="radio" value="thumb-up" checked />
+                              <input id="group1-{{ book._id }}" name="group1" type="radio" value="thumb-up" checked />
                               <span>Red</span>
                             </label>
                           </p>
                           <p>
                             <label>
                               <i class="material-icons prefix" style="color: red;">thumb_down</i>
-                              <input name="group1" type="radio" value="thumb-down" />
+                              <input id="group1-{{ book.title }}" name="group1" type="radio" value="thumb-down" />
                               <span>Yellow</span>
                             </label>
                           </p>

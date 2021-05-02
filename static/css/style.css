@@ -181,7 +181,6 @@ textarea:focus {
  padding-top: 40px;
 }
 
-
 .delete-error {
  color: red; 
  display: none;
@@ -195,7 +194,6 @@ textarea:focus {
  text-align: center;
  padding-top: 40px;
 }
-
 
 .edit-error {
  color: red; 
@@ -223,7 +221,6 @@ textarea:focus {
   color: #00001a;
 }
 
-
 .modify-review {
  color: #722F37;
 }
@@ -248,7 +245,6 @@ td a:hover {
  text-align: center !important;
  display: inline-block !important;
 }
-
 
 /* https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox */
 [type="checkbox"]:checked+span:not(.lever):before {
@@ -279,7 +275,6 @@ td a:hover {
   font-size: x-large;
   padding-bottom: 12px;
 }
-
 
 /* Custom CSS Parallax Template */
 nav ul a,
