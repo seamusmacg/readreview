@@ -95,6 +95,12 @@ def edit_review():
 def get_profile():
   return render_template("profile.html")
 
+@app.route("/catalogue/delete_book", methods=[ 'GET','POST'])
+def delete_book():
+  if request.method == "POST":
+    book = Book()
+    return book.delete_book()
+
 
 if __name__ == "__main__":
   app.run(host=os.environ.get("IP"),
