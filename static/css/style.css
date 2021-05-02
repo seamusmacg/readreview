@@ -211,6 +211,17 @@ textarea:focus {
  padding-top: 40px;
 }
 
+.search-btn {
+  background-color: #00001a !important;
+}
+
+.reset-btn {
+  background-color: #a27840 !important;
+}
+
+.fa-search {
+  color: #00001a;
+}
 
 
 .modify-review {
