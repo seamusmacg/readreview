@@ -66,11 +66,11 @@ The user is presented with a link to the catalogue immediately on landing on the
 
 Callout Section: 
 
-!["Callout Section with link to catalogue"](https://github.com/seamusmacg/readreview/static/images/callout.PNG)
+!["Callout Section with link to catalogue"](https://github.com/seamusmacg/readreview/blob/main/static/images/callout.PNG)
 
 Catalogue Section: 
 
-!["List of books shown to user"](https://github.com/seamusmacg/readreview/static/images/catalogue.PNG)
+!["List of books shown to user"](https://github.com/seamusmacg/readreview/blob/main/static/images/catalogue.PNG)
 
 
 ### User Story #2
@@ -81,13 +81,13 @@ The user is presented with a review section for each book in the catalogue. Ever
 
 Review Section: 
 
-!["Book review section"](https://github.com/seamusmacg/readreview/static/images/review.PNG)
+!["Book review section"](https://github.com/seamusmacg/readreview/blob/main/static/images/review.PNG)
 
 User can submit book if not in the catalogue
 
 Book Submit Section:
 
-!["Submit book section"](https://github.com/seamusmacg/readreview/static/images/submit.PNG)
+!["Submit book section"](https://github.com/seamusmacg/readreview/blob/main/static/images/submit.PNG)
 
 
 ## Responsiveness
