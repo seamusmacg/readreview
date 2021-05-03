@@ -157,12 +157,12 @@ The application was deployed through Heroku pages as follows:
 
 
 ## Credits
--[Materialize](https://materializecss.com/getting-started.html) Parallax Template used for base site structure
--[Pexels](https://www.pexels.com/search/bookshelf/) Home page image sourced here
--[Stack Overflow Answer](https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen) - Change colour of materialize form validation
--[Stack Overflow Answer](https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox) - Change colour of materialize checkbox
--[Quabr](http://5.9.10.113/65535560/typeerror-object-of-type-objectid-is-not-json-serializable) - JSON Encoder class that converts ObjectId to string. 
--[W3schools](https://www.w3schools.com/)
--[CSS-Tricks](https://css-tricks.com/)
--[Flask User Login Tutorial](https://github.com/LukePeters/User-Login-System-Tutorial) - Used this tutorial for building login/authentication system 
+- [Materialize](https://materializecss.com/getting-started.html) Parallax Template used for base site structure
+- [Pexels](https://www.pexels.com/search/bookshelf/) Home page image sourced here
+- [Stack Overflow Answer](https://stackoverflow.com/questions/44942347/change-the-default-color-of-materialize-css-input-fields-i-have-attached-screen) - Change colour of materialize form validation
+- [Stack Overflow Answer](https://stackoverflow.com/questions/61845621/how-to-change-color-of-materialize-multiple-select-checkbox) - Change colour of materialize checkbox
+- [Quabr](http://5.9.10.113/65535560/typeerror-object-of-type-objectid-is-not-json-serializable) - JSON Encoder class that converts ObjectId to string. 
+- [W3schools](https://www.w3schools.com/)
+- [CSS-Tricks](https://css-tricks.com/)
+- [Flask User Login Tutorial](https://github.com/LukePeters/User-Login-System-Tutorial) - Used this tutorial for building login/authentication system 
 - I would like to thank my mentor Adegbenga Adeye for all his guidance and help throughout this project
