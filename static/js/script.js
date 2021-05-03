@@ -82,7 +82,6 @@ $("form[name=add_review]").submit(function (e) {
 
     },
     error: function (resp) {
-      // $error.text(resp.responseJSON.error).removeClass("error-hidden");
       $(".modal-content").hide();
       $(".review-error").text(resp.responseJSON.error);
       $(".review-error").css("display", "block");
@@ -248,14 +247,6 @@ function togglePassword() {
 $(".submit-review").click(function () {
   $(".modal-content").hide();
 });
-
-
-function validateForm(button) {
-  var value = $(button).closest("textarea").val();
-  if (value == ""){
-    $(button).removeClass("modal-trigger");
-  }
-}
 
 
 // Validate form before submit
