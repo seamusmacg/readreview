@@ -6,7 +6,7 @@
 
 | Component | Intended Function | Works as Intended? | Fix |
 | -------------- | ------------------- | ---------------- | --- |
-|**See Catalogue** | Take user to Catalogue page | Yes | N/A |
+|**See Catalogue Link** | Take user to Catalogue page | Yes | N/A |
 |**Home Link** | Take user to the home page | Yes | N/A |
 |**Facebook Icon Link** | Take user to Facebook page in new tab | Yes | N/A |
 |**Twitter Icon Link** | Take user to Twitter page in new tab | Yes | N/A |
@@ -92,7 +92,7 @@ Book Submit Section:
 
 ## Responsiveness
 
-The application was tested for responsiveness on multiple devices using Chrome Developer Tools. Media queries were used to keep the device responsive across different devices.
+The application was tested for responsiveness on multiple devices and browser using Developer Tools. Media queries and Materialize CSS  were used to keep the device responsive across different devices.
 
 | Component | Intended Result | Works as intended? | Fix |
 | --------- | --------------- | ------------------ | --- |
@@ -106,7 +106,7 @@ The application was tested for responsiveness on multiple devices using Chrome D
 I ran the [Lighthouse](https://developers.google.com/web/tools/lighthouse/) testing tool to check the quality and performance of the site pages. The site received good ratings in performance ranging from 94 - 97. 
 
 Example Report for Submit Book Page:
-!["Lighthouse Report"](https://github.com/seamusmacg/readreview/static/lighthouse.PNG)
+!["Lighthouse Report"](https://github.com/seamusmacg/readreview/blob/main/static/images/lighthouse.PNG)
 
 ## Heroku
 
