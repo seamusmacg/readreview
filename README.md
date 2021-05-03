@@ -113,7 +113,6 @@ I chose this font as I thought it matched well with the decorative book/library 
 - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - Used to test the responsiveness of site on different screen sizes and also used for debugging and checking network activity
 - [Balsamiq](https://balsamiq.com/) - Mockup application tool used to draw wireframes for the application. 
 - [ami.responsivdesign.is](http://ami.responsivedesign.is) - Used to make a mockup of the application shown at the beginning of README.md file.
-- [Open Trivia Database](https://opentdb.com/) - Provided the [API](https://opentdb.com/api_config.php) used to populate the quiz questions. 
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - used to test the quality and performance of the application. 
 
 ## Testing
@@ -133,9 +132,9 @@ The CSS passed without any errors - [CSS Validation Service](https://jigsaw.w3.o
 Testing was conducted on the finished application using Flask and Chrome Developer Tools. I also tested the application on different browsers. A full report on the manual testing process that tests functionality, usability, responsiveness and performance is available [here]().
 
 ## Major Bugs
-- Unable to create a routes.py file in User directory. Solution : Delete routes.py for user and add route in main app.py
-- Getting error "TypeError: Object of type 'ObjectId' is not JSON serializable" when creating a new user. Solution: create a JSON Encoder class
-- Unable to prevent modal trigger when review form is empty. Solution: Create jquery to handle to click event and validate form.
+- Unable to create a routes.py file in User directory. **Solution:** Delete routes.py for user and add route in main app.py
+- Getting error "TypeError: Object of type 'ObjectId' is not JSON serializable" when creating a new user. **Solution:** create a JSON Encoder class
+- Unable to prevent modal trigger when review form is empty. **Solution:** Create jquery to handle to click event and validate form.
 
 ## Deployment
 
