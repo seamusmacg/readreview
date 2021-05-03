@@ -44,7 +44,7 @@ ReadReview is a book review website. Users can register and become users where t
 
 ### Features
 - Home page - contains callout section which points to the catalogue which is the main feature of the site.  It also contains an About Section which explains the site
-- Catalogue page - the primary functionality of the site is presented here. All the books in the catalogue are shown here including reviews submitted by users. It is on this page where users can interact with the catalogue - deleting. editing etc. 
+- Catalogue page - the primary functionality of the site is presented here. All the books in the catalogue are shown here including reviews submitted by users. It is on this page where users can interact with the catalogue - deleting, editing etc. 
 - Profile - this page contains information about the user currently logged into the site.
 - Submit Book - Here users can submit a book to the catalogue by filling out a form.
 - Register - Visitors can register with the site by filling register form
@@ -59,7 +59,7 @@ The site is presented in a linear fashion with information presented on scrollin
 I used [Balsamiq](https://balsamiq.com) to create a wireframe for each event presented to the user. 
 
 - [Home Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-home.png)
-- [Catalogue Page](https://github.com/seamusmacg/readreview/blob/main/static/images/catalogue.PNG)
+- [Catalogue Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-catalogue.png)
 - [Register Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-register.png)
 - [Login Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-login.png)
 - [Submit Book Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-submit.png)
@@ -100,7 +100,6 @@ I chose this font as I thought it matched well with the decorative book/library 
 - !["Github Badge"](https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white) - [Github](https://github.com/) is a platform for hosting software development and version control using Git. 
 - !["Python Badge"](https://img.shields.io/badge/python-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white) - [Python](https://www.python.org/) is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Python was used along with various libraries to access the database and present information to the user.
 - !["Flask Badge"](https://img.shields.io/badge/flask-%23000.svg?&style=for-the-badge&logo=flask&logoColor=white) - [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a micro web framework written in Python that utilizes other libraries like Werkzeug and Jinja.
-- !["Flask Badge"](https://img.shields.io/badge/flask-%23000.svg?&style=for-the-badge&logo=flask&logoColor=white) - [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a micro web framework written in Python that utilizes other libraries like Werkzeug and Jinja.
 - !["MongoDB Badge"](https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white) - [MongoDB](https://www.mongodb.com/) is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB was used as the primary database for storing the sites data. 
 - !["Heroku Badge"](https://img.shields.io/badge/heroku-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white) - [Heroku](https://www.heroku.com/)  is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. Heroku was used for deploying and hosting the site.
 
@@ -129,7 +128,7 @@ The CSS passed without any errors - [CSS Validation Service](https://jigsaw.w3.o
 
 ### Manual Testing 
 
-Testing was conducted on the finished application using Flask and Chrome Developer Tools. I also tested the application on different browsers. A full report on the manual testing process that tests functionality, usability, responsiveness and performance is available [here]().
+Testing was conducted on the finished application using Flask and Chrome Developer Tools. I also tested the application on different browsers. A full report on the manual testing process that tests functionality, usability, responsiveness and performance is available [here](https://github.com/seamusmacg/readreview/blob/main/testing/TESTING.md).
 
 ## Major Bugs
 - Unable to create a routes.py file in User directory. **Solution:** Delete routes.py for user and add route in main app.py
