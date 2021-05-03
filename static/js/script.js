@@ -248,3 +248,28 @@ function togglePassword() {
 $(".submit-review").click(function () {
   $(".modal-content").hide();
 });
+
+
+function validateForm(button) {
+  var value = $(button).closest("textarea").val();
+  if (value == ""){
+    $(button).removeClass("modal-trigger");
+  }
+}
+
+
+// Validate form before submit
+$(".submit-btn").click(function () {
+  var val = $(this).closest("div.row").find("textarea[name='review']").val();
+  if (val.length < 20 || val.length > 150) {
+    $("button").removeClass("modal-trigger");
+    $("p").removeClass("error--hidden");
+    $(".error").html("Reviews must be between 20 and 150 characters long");
+    setTimeout(function () {
+      $("p").addClass("error--hidden");
+      $(".error").empty();
+      $("button").addClass("modal-trigger");
+    }, 4000);
+  }
+});
+
