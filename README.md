@@ -1,6 +1,6 @@
 # [ReadReview Book Review Application](https://read-review-project.herokuapp.com/)
 
-!["This application was tested for responsiveness on multiple devices"](https://github.com/seamusmacg/readreview/static/images/readreview-mockup.PNG)
+!["This application was tested for responsiveness on multiple devices"](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-mockup.PNG)
 
 ---
 
@@ -58,12 +58,12 @@ The site is presented in a linear fashion with information presented on scrollin
 
 I used [Balsamiq](https://balsamiq.com) to create a wireframe for each event presented to the user. 
 
-- [Home Page](https://github.com/seamusmacg/static/images/readreview-home.png)
-- [Catalogue Page](https://github.com/seamusmacg/static/readreview-catalogue.png)
-- [Register Page](https://github.com/seamusmacg/static/images/readreview-register.png)
-- [Login Page](https://github.com/seamusmacg/static/images/readreview-login.png)
-- [Submit Book Page](https://github.com/seamusmacg/static/images/readreview-submit.png)
-- [Profile Page](https://github.com/seamusmacg/static/images/readreview-profile.png)
+- [Home Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-home.png)
+- [Catalogue Page](https://github.com/seamusmacg/readreview/blob/main/static/images/catalogue.PNG)
+- [Register Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-register.png)
+- [Login Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-login.png)
+- [Submit Book Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-submit.png)
+- [Profile Page](https://github.com/seamusmacg/readreview/blob/main/static/images/readreview-profile.png)
 
 I maintained a consistent structure across the pages with many pages sharing similar features. 
 
