@@ -7,7 +7,20 @@
 | Component | Intended Function | Works as Intended? | Fix |
 | -------------- | ------------------- | ---------------- | --- |
 |**See Catalogue Link** | Take user to Catalogue page | Yes | N/A |
-|**Home Link** | Take user to the home page | Yes | N/A |
+|**Home Link** | Take user to the Home page | Yes | N/A |
+|**Catalogue Link** | Take user to the Catalogue page | Yes | N/A |
+|**Profile Link** | Take user to the Profile page | Yes | N/A |
+|**Submit Book Link** | Take user to the Submit Book page | Yes | N/A |
+|**Log Out Link** | Log user out, return to Home page| Yes | N/A |
+|**Log In Link** | Take user to Login page | Yes | N/A |
+|**Register Link** | Take user to Register page | Yes | N/A |
+|**Home Link (Mobile)** | Take user to the Home page | Yes | N/A |
+|**Catalogue Link (Mobile)** | Take user to the Catalogue page | Yes | N/A |
+|**Profile Link (Mobile)**| Take user to the Profile page | Yes | N/A |
+|**Submit Book Link (Mobile)** | Take user to the Submit Book page | Yes | N/A |
+|**Log Out Link (Mobile)** | Log user out, return to Home page| Yes | N/A |
+|**Log In Link (Mobile)** | Take user to Login page | Yes | N/A |
+|**Register Link (Mobile)** | Take user to Register page | Yes | N/A |
 |**Facebook Icon Link** | Take user to Facebook page in new tab | Yes | N/A |
 |**Twitter Icon Link** | Take user to Twitter page in new tab | Yes | N/A |
 |**Instagram Icon Link** | Take user to Instagram page in new tab | Yes | N/A |
@@ -17,17 +30,17 @@
 |**Careers Link** | Link doesn't go anywhere | Yes | N/A |
 |**Catalogue Link** | Take user to Catalogue page| Yes | N/A |
 |**Login Link** | Take user to Login page| Yes | N/A |
-|**Login Link(Register Page)** | Take user to Login page| Yes | N/A |
+|**Login Link (Register Page)** | Take user to Login page| Yes | N/A |
 |**Register Link** | Take user to Register page| Yes | N/A |
-|**Register Link(Login Page)** | Take user to Register page| Yes | N/A |
+|**Register Link (Login Page)** | Take user to Register page| Yes | N/A |
 |**Search Button** | Return book from searched string or display validation error if empty or less than 3 characters | Yes | N/A |
 |**Reset Button** | Reset search form | Yes | N/A |
-|**Login Link(Catalogue page)** | Take user to Login page | Yes | N/A |
-|**Register Link(Catalogue page)** | Take user to Register page | Yes | N/A |
-|**Amazon Link(Catalogue page)** | Take user to Amazon with results for that book | Yes | N/A |
-|**Delete Book Link(Catalogue page)** | Delete book from DB return success message in a modal | Yes | N/A |
-|**Delete Review Link(Catalogue page)** | Delete review from DB return success message in a modal | Yes | N/A |
-|**Edit Review Link(Catalogue page)** | Show review as form in a modal | Yes | N/A |
+|**Login Link (Catalogue page)** | Take user to Login page | Yes | N/A |
+|**Register Link (Catalogue page)** | Take user to Register page | Yes | N/A |
+|**Amazon Link (Catalogue page)** | Take user to Amazon with results for that book | Yes | N/A |
+|**Delete Book Link (Catalogue page)** | Delete book from DB return success message in a modal | Yes | N/A |
+|**Delete Review Link (Catalogue page)** | Delete review from DB return success message in a modal | Yes | N/A |
+|**Edit Review Link (Catalogue page)** | Show review as form in a modal | Yes | N/A |
 |**Thumbs Up Radio Button** | Checks on click  | Yes | N/A |
 |**Thumbs Down Radio Button** | Checks on click  | Yes | N/A |
 |**Submit Review Button (Outside Modal)** | Validate form, trigger modal if validated  | Yes | N/A |
