@@ -28,7 +28,7 @@
 ---
 
 ### Project Overview
-ReadReview is a book review website. Users can register and become users where they can submit books adding to the ReadReview catalogue. They can also leave reviews for existing titles. Books can deleted by admin or the user who submitted the book. Users can edit or delete reviews they submitted. The admin can delete or edit all reviews.
+ReadReview is a book review website. Users can register and become users where they can submit books adding to the ReadReview catalogue. They can also leave reviews for existing titles. Books can be deleted by admin or the user who submitted the book. Users can edit or delete reviews they submitted. The admin can delete or edit all reviews.
 
 
 ## UX 
@@ -77,7 +77,7 @@ I maintained a consistent structure across the pages with many pages sharing sim
 - ![#008000](https://via.placeholder.com/15/008000/000000?text=+) `#008000`
 - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF`
 
-The color theme I chose was inspired by decorative books you often see in libraries. These colors are usually a wine red, navy/blue, gold and silver. I used an assortment of these colors throughout the site to recreate that library look and feel.
+The color theme I chose was inspired by decorative books you often see in libraries. These colors are usually wine red, navy/blue, gold and silver. I used an assortment of these colors throughout the site to recreate that library look and feel.
 
 Validation messages are displayed in the natural colours of green for success and red for errors.
 
@@ -91,15 +91,15 @@ I chose this font as I thought it matched well with the decorative book/library 
 
 - !["HTML5 Badge"](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) - [HTML 5](https://www.w3.org/TR/html52/)  is a markup language that was used displaying content of the site.
 - !["CSS Badge"](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) - [CSS](https://www.w3.org/standards/webdesign/htmlcss.html) is a style sheet language used for presenting/styling the content of the site . 
-- !["Materialize CSS Badge"](https://img.shields.io/badge/Materialize-CSS-red) - [Materialize CSS](https://materializecss.com/getting-started.html/) Material Design is a design language that combines the classic principles of successful design along with innovation and technology. 
+- !["Materialize CSS Badge"](https://img.shields.io/badge/Materialize-CSS-red) - [Materialize CSS](https://materializecss.com/getting-started.html/) Materialize CSS is a UI component library which is created with CSS, JavaScript and HTML. It is created and designed by Google. Materialize CSS is also known as Material Design. It is a design language which combines the classic principles of successful design along with innovation and technology. I used a Materialize parallax template for the base structure of site and for many of the components on the site.
 - !["Javascript Badge"](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) - [Javascript](https://www.javascript.com/) is a scripting language that was used to provide interactivity to the site.
-- !["Jquery"](https://img.shields.io/badge/jquery%20-%230769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white) - [Jquery](https://jquery.com/) is a Javascript library that was used for HTML DOM tree traversal and manipulation in the application.
+- !["Jquery"](https://img.shields.io/badge/jquery%20-%230769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white) - [Jquery](https://jquery.com/) is a Javascript library that was used for HTML DOM tree traversal and manipulation on the site.
 - !["Google Fonts"](https://img.shields.io/badge/-Google%20Fonts-red?logo=Google) - [Google Fonts](https://fonts.google.com/) is a library of free licensed font families that was used to import the Goudy Bookletter 1911 font.
 - !["Font Awesome Badge"](https://img.shields.io/badge/Font_Awesome-5.14-339AF0?logo=font-awesome) - [Font Awesome](https://fontawesome.com/) is a font and icon toolkit that was used to generate the icons used throughout the site. 
 - !["Git Badge"](https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white) - [Git](https://git-scm.com) is an open source distributed version control system that was used to track any changes made to the source code. 
 - !["Github Badge"](https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white) - [Github](https://github.com/) is a platform for hosting software development and version control using Git. 
 - !["Python Badge"](https://img.shields.io/badge/python-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white) - [Python](https://www.python.org/) is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Python was used along with various libraries to access the database and present information to the user.
-- !["Flask Badge"](https://img.shields.io/badge/flask-%23000.svg?&style=for-the-badge&logo=flask&logoColor=white) - [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a micro web framework written in Python that utilizes other libraries like Werkzeug and Jinja.
+- !["Flask Badge"](https://img.shields.io/badge/flask-%23000.svg?&style=for-the-badge&logo=flask&logoColor=white) - [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a micro web framework written in Python that utilizes other libraries like Werkzeug and Jinja. Used to dynamically create the HTML pages and apply logic throughout the site.
 - !["MongoDB Badge"](https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white) - [MongoDB](https://www.mongodb.com/) is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB was used as the primary database for storing the sites data. 
 - !["Heroku Badge"](https://img.shields.io/badge/heroku-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white) - [Heroku](https://www.heroku.com/)  is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. Heroku was used for deploying and hosting the site.
 
@@ -120,11 +120,10 @@ The application was built using [VS Code](https://code.visualstudio.com). Flask 
 
 ### Validation 
 
-I validated the HTML source code using the [HTML Validation Service](https://validator.w3.org), there was a projection attribute in a link element which has been deprecated. I removed this.
-Removed role from nav element as unnecessary.
-Removed unused quotation mark from a tag.
-
-The CSS passed without any errors - [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- I validated the HTML source code using the [HTML Validation Service](https://validator.w3.org), there was a projection attribute in a link element which has been deprecated. I removed this.
+- Removed role from nav element as unnecessary.
+- Removed unused quotation mark from a tag.
+- The CSS passed without any errors - [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
 ### Manual Testing 
 
