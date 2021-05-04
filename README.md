@@ -30,6 +30,10 @@
 ### Project Overview
 ReadReview is a book review website. Users can register and become users where they can submit books adding to the ReadReview catalogue. They can also leave reviews for existing titles. Books can be deleted by admin or the user who submitted the book. Users can edit or delete reviews they submitted. The admin can delete or edit all reviews.
 
+**Admin Access:** 
+**Username:** Admin 
+**Password:** password
+
 
 ## UX 
 
